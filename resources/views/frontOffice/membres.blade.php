@@ -10,7 +10,7 @@
 							<h1 class="text-white">
 								Nos membres			
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="about.html">   Membres</a></p>
+							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="about.html">   Membres</a></p>
 						</div>	
 					</div>
 				</div>
@@ -25,80 +25,107 @@
 			<div class="container">
 
 			<div class="row">
-				<div class="col-md-3">
-					<div class="text-center">
-						
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-							
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-		
-					<div class="text-center">
-
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-					
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
-					</div>
-				</div>													
-
-				<div class="col-md-3 ">
-					<div class="text-center">
 				
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-					
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
-					</div>
-				</div>	
-				<div class="col-md-3 " style="margin-bottom: 50px">
-					<div class="text-center">
+				<div class="col-md-3 " style="padding-bottom: 30px">
+					<div class="widget-wrap" >
+						<div class="single-sidebar-widget user-info-widget">
+							<div class="text-center">
 				
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-					
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-3 ">
-					<div class="text-center">
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget user-info-widget">
+							<div class="text-center">
 				
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-					
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-3 ">
-					<div class="text-center">
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget user-info-widget">
+							<div class="text-center">
 				
-					<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-					<a href="#"><h4>Charlie Barber</h4></a>
-					
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-linkedin"></i></a>
-						<a href="#"><i class="fab fa-github"></i></a>
-						<a href="#"><i class="fab fa-researchgate"></i></a>
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 ">
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget user-info-widget">
+							<div class="text-center">
+				
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 " >
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget user-info-widget" >
+							<div class="text-center">
+				
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 ">
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget user-info-widget">
+							<div class="text-center">
+				
+								<img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 150px; ">
+								<a href="#"><h4>Charlie Barber</h4></a>
+								<ul class="social-links">
+									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fab fa-github"></i></a></li>
+									<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>												
 			</div>

@@ -27,6 +27,7 @@
 			<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/main.css')}}">
+			<link rel="stylesheet" href="{{asset('css/search.css')}}">
 
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
 
@@ -55,32 +56,32 @@
 			</div>
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
-			      <div id="logo">
-			        <a href="index.html"><img src="img/LRIT_logo.png" alt="" title="LRIT" style="width: 40%" /></a>
+			      <div class="col-md-2" id="logo">
+			        <a href="index.html"><img src="{{asset('LRIT_logo.png')}}" alt="" title="LRIT" style="width: 100%" /></a>
 			      </div>
+
+			      <div>
+			      	<form class="search-form" action="#">
+			            <input placeholder="Search" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search '" >
+			            <button type="submit"><i class="fa fa-search"></i></button>
+			        </form>
+			      </div>
+			   
+			      <div class="col-md-6">
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="#">Accueil</a></li>
-			          <li><a href="#">A propos</a></li>
-			          <li><a href="#">Equipes</a></li>
-			          <li><a href="#">Membres</a></li>
-			          <li><a href="#">Projets</a></li>
-			          <li class="menu-has-children"><a href="">Pages</a>
-			            <ul>
-		              		<li><a href="course-details.html">Course Details</a></li>		
-		              		<li><a href="event-details.html">Event Details</a></li>		
-			                <li><a href="elements.html">Elements</a></li>
-					          <li class="menu-has-children"><a href="">Level 2 </a>
-					            <ul>
-					              <li><a href="#">Item One</a></li>
-					              <li><a href="#">Item Two</a></li>
-					            </ul>
-					          </li>					                		
-			            </ul>
-			          </li>					          					          		          
-			          <li><a href="contact.html">Contact</a></li>
+			          <li><a href="{{url('frontOffice')}}">Accueil</a></li>
+			          <li><a href="{{url('frontOffice/aprpos')}}">A propos</a></li>
+			          <li><a href="{{url('frontOffice/equipes')}}">Equipes</a></li>
+			          <li><a href="{{url('frontOffice/membres')}}">Membres</a></li>
+			          <li><a href="{{url('frontOffice/projets')}}">Projets</a></li>
+			         				          					          		          
+			          <li><a href="{{url('frontOffice/contact')}}">Contact</a></li>
+			          <li><a href="{{url('/')}}">Login</a></li>
+
 			        </ul>
-			      </nav><!-- #nav-menu-container -->		    		
+			      </nav><!-- #nav-menu-container -->
+			      </div>		    		
 		    	</div>
 		    </div>
 		</header><!-- #header -->
@@ -189,6 +190,13 @@
 			<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>	
 			<script src="{{asset('js/owl.carousel.min.js')}}"></script>									
 			<script src="{{asset('js/mail-script.js')}}"></script>	
-			<script src="{{asset('js/main.js')}}"></script>	
+			<script src="{{asset('js/main.js')}}"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+    			$('.icon').click(function(){
+       				 $('.search').toggleClass('active');
+   				 });
+			});	
+			</script>
 	</body>
 </html>

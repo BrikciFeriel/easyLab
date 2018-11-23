@@ -38,11 +38,22 @@ Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
 });
 
+Route::get('/frontOffice/profil', function () {
+    return view('frontOffice/profilMembre');
+});
 
 
+Route::get('/frontOffice', function () {
+    return view('frontOffice/accueil');
+});
+
+Route::get('/frontOffice/projets', function () {
+    return view('frontOffice/projets');
+});
 
 
-	// backoffice
+ 
+ //backoffice
 
 Route::get('dashboard','dashController@index');
 Route::get('parametre','ParametreController@create');
