@@ -35,8 +35,13 @@ Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
 });
 
+Route::get('/frontOffice/profil', function () {
+    return view('frontOffice/profilMembre');
+});
 
-
+Route::get('/frontOffice', function () {
+    return view('frontOffice/accueil');
+});
 	// backoffice
 
 Route::get('dashboard','dashController@index');
