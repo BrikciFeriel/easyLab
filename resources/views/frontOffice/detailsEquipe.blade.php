@@ -9,7 +9,7 @@
 										<h1 class="text-white">
 											SIDK		
 										</h1>	
-										<p class="text-white link-nav"><a href="index.html">Accueil</a>  <span class="fas fa-angle-right"></span>  <a href="equipes.html">Equipes</a><span class="fas fa-angle-right"></span>  <a href="detailEquipes.html">Détails</a></p>
+										<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil</a>  <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/equipes')}}">Equipes</a><span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/detailsEquipe')}}">Détails</a></p>
 									</div>	
 								</div>
 							</div>
@@ -102,7 +102,7 @@
 												<div class="text-center">
 													
 												<img class="rounded-circle" src="{{asset('img/azz.jp')}}g" alt="" style="width: 300px; margin-bottom: 10px ">
-												<a href="#"><h4>CHIKH Azeddine</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>CHIKH Azeddine</h4></a>
 
 												</div>
 
@@ -115,7 +115,7 @@
 												<div class="text-center">
 
 												<img class="rounded-circle" src="{{asset('img/tad.jp')}}g" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>TADLAOUI Mohamed</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>TADLAOUI Mohamed</h4></a>
 												
 												</div>
 											</div>													
@@ -124,7 +124,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p9.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>DIDI Fedoua</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>DIDI Fedoua</h4></a>
 												
 												</div>
 											</div>
@@ -133,7 +133,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p10.jp')}}g" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>MESSABIHI Mohamed</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>MESSABIHI Mohamed</h4></a>
 												
 												</div>
 											</div>
@@ -142,7 +142,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p7.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>BENAZZOUZ Mortada</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>BENAZZOUZ Mortada</h4></a>
 												
 												</div>
 											</div>
@@ -151,7 +151,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p2.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>SETTOUTI ahmed Khalid</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>SETTOUTI ahmed Khalid</h4></a>
 												
 												</div>
 											</div>	
@@ -160,7 +160,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p6.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>CHIALI Abdelhak</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>CHIALI Abdelhak</h4></a>
 												
 												</div>
 											</div>	
@@ -169,7 +169,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p4.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>MATALLAH Houcine</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>MATALLAH Houcine</h4></a>
 												
 												</div>
 											</div>	
@@ -178,7 +178,7 @@
 												<div class="text-center">
 											
 												<img class="rounded-circle" src="{{asset('img/p8.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="#"><h4>BENMAMMAR Mohamed</h4></a>
+												<a href="{{url('frontOffice/1/details')}}"><h4>BENMAMMAR Mohamed</h4></a>
 												
 												</div>
 											</div>	
@@ -204,7 +204,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="course-details.html">
+								<a href="{{url('frontOffice/detailProjet')}}">
 									<h4>
 										Big Data
 									</h4>
@@ -228,7 +228,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="course-details.html">
+								<a href="{{url('frontOffice/detailProjet')}}">
 									<h4>
 										ERP (Enterprise Resource Planning)
 									</h4>
@@ -252,7 +252,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="course-details.html">
+								<a href="{{url('frontOffice/detailProjet')}}">
 									<h4>
 										La cybersécurité
 									</h4>
@@ -276,7 +276,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="course-details.html">
+									<a href="{{url('frontOffice/detailProjet')}}">
 										<h4>
 											Big Data
 										</h4>
@@ -301,7 +301,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="course-details.html">
+									<a href="{{url('frontOffice/detailProjet')}}">
 										<h4>
 											ERP (Enterprise Resource Planning)
 										</h4>
@@ -326,7 +326,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="course-details.html">
+									<a href="{{url('frontOffice/detailProjet')}}">
 										<h4>
 											La cybersécurité
 										</h4>
@@ -351,7 +351,7 @@
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
-										<a href="course-details.html">
+										<a href="{{url('frontOffice/detailProjet')}}">
 											<h4>
 												Big Data
 											</h4>
@@ -376,7 +376,7 @@
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
-										<a href="course-details.html">
+										<a href="{{url('frontOffice/detailProjet')}}">
 											<h4>
 												ERP (Enterprise Resource Planning)
 											</h4>
@@ -406,7 +406,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    
 								      <div class="thumb">
 								  		 <img style="height:200px;" class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
 								  	  </div>
@@ -423,7 +423,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    
 								      <div class="thumb">
 								  		 <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/chu.jpg')}}" alt="">
 								  	  </div>
@@ -440,7 +440,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    
 								      <div class="thumb">
 								  		 <img style="height:180px;" class="content-image img-fluid d-block mx-auto" src="{{asset('img/kherbouch.jpg')}}" alt="">
 								  	  </div>

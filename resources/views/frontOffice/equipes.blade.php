@@ -10,7 +10,7 @@
 							<h1 class="text-white">
 								Nos équipes				
 							</h1>	
-							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="about.html">   equipes</a></p>
+							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/equipes')}}">   equipes</a></p>
 						</div>	
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 													</div>
 													<div class="detials col-12 col-md-4">
 													
-													<a href="detailEquipes.html"><h2>SIDK</h2></a>
+													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>SIDK</h2></a>
 													<p><h4>Système d'information et de connaissance</h4></p>
 													</div>
 													<div class="col-12 col-md-2 thumb">
@@ -73,7 +73,7 @@
 													</div>
 													<div class="detials col-12 col-md-4">
 													
-													<a href="detailEquipes.html"><h2>ILS</h2></a>
+													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>ILS</h2></a>
 													<p><h4>Ingénierie logicielle sécurisée</h4></p>
 													</div>
 												</div>
@@ -85,7 +85,7 @@
 													</div>
 													<div class="detials col-12 col-md-4">
 													<p></p>
-													<a href="detailEquipes.html"><h2>RSDS</h2></a>
+													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>RSDS</h2></a>
 													<p><h4>Réseau, service distribués et systèmes</h4></p>
 													</div>
 													<div class="col-12 col-md-2 thumb">
@@ -93,7 +93,7 @@
 													</div>
 													<div class="detials col-12 col-md-4">
 													
-													<a href="detailEquipes.html"><h2>IA</h2></a>
+													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>IA</h2></a>
 													<p><h4>Intelligence artificielle</h4></p>
 													</div>
 																												
