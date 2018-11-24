@@ -64,6 +64,7 @@ Route::get('/frontOffice/articles', function () {
     return view('frontOffice/articles');
 });
 
+
 Route::get('/frontOffice/actualites', function () {
     return view('frontOffice/actualites');
 });
@@ -73,6 +74,9 @@ Route::get('/frontOffice/detailsActualite', function () {
 });
 
 
+Route::get('/frontOffice/detailArticle', function () {
+    return view('frontOffice/detailArticle');
+});
 
 
  
