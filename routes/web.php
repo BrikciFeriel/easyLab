@@ -52,6 +52,7 @@ Route::get('/frontOffice/projets', function () {
 });
 
 
+
  
  //backoffice
 

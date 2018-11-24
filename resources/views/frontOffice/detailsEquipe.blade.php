@@ -408,7 +408,7 @@
 									<div class="overlay overlay-bg"></div>
 								    <a href="#" target="_blank">
 								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
+								  		 <img style="height:200px;" class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
 								  	  </div>
 								      <div class="content-details">
 								        <h4 class="content-title mx-auto text-uppercase">Groupe DENNOUNI</h4>
@@ -442,7 +442,7 @@
 									<div class="overlay overlay-bg"></div>
 								    <a href="#" target="_blank">
 								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/kherbouch.jpg')}}" alt="">
+								  		 <img style="height:180px;" class="content-image img-fluid d-block mx-auto" src="{{asset('img/kherbouch.jpg')}}" alt="">
 								  	  </div>
 								      <div class="content-details">
 								        <h4 class="content-title mx-auto text-uppercase">Groupe Kherbouche</h4>
