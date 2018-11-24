@@ -47,7 +47,7 @@
 											</div>
 											<div class="row col-md-12">
 												<div class="feature-img">
-												<img class="img-fluid" src="lab.jpg" alt="">
+												<img class="img-fluid" src="{{asset('img/lab.jpg')}}" alt="">
 												</div>
 											</div>
 	                                    	
