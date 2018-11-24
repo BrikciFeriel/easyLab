@@ -27,9 +27,7 @@ Route::get('/', function () {
 Route::get('/frontOffice/equipes', function () {
     return view('frontOffice/equipes');
 });
-Route::get('/frontOffice/membres', function () {
-    return view('frontOffice/membres');
-});
+Route::get('/frontOffice/membres', 'FrontController@membres');
 
 Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
