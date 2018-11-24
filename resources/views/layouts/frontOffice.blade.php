@@ -71,7 +71,7 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="{{url('frontOffice')}}">Accueil</a></li>
-			          <li><a href="{{url('frontOffice/aprpos')}}">A propos</a></li>
+			          <li><a href="{{url('frontOffice/apropos')}}">A propos</a></li>
 			          <li><a href="{{url('frontOffice/equipes')}}">Equipes</a></li>
 			          <li><a href="{{url('frontOffice/membres')}}">Membres</a></li>
 			          <li><a href="{{url('frontOffice/projets')}}">Projets</a></li>

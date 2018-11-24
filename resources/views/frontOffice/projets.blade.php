@@ -9,7 +9,7 @@
                     <h1 class="text-white">
                         Projets	
                     </h1>	
-                    <p class="text-white link-nav"><a href="index.html">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="courses.html"> Projets</a></p>
+                    <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/projets')}}"> Projets</a></p>
                 </div>	
             </div>
         </div>
