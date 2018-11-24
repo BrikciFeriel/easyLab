@@ -9,7 +9,7 @@
                     <h1 class="text-white">
                         Projets	
                     </h1>	
-                    <p class="text-white link-nav"><a href="index.html">Accueil </a>  <span class="lnr lnr-arrow-right"></span>  <a href="courses.html"> Projets</a></p>
+                    <p class="text-white link-nav"><a href="index.html">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="courses.html"> Projets</a></p>
                 </div>	
             </div>
         </div>
@@ -33,17 +33,31 @@
 									</form>
 								</div>
 							</span>
+							<div class="pb-40 col-lg-12  justify-content-center">
+								<center>
+									<div class="button-group-area ">
+									<a href="#" class="genric-btn primary-border circle arrow">SIDK</a>
+									<a href="#" class="genric-btn primary-border circle arrow">ILS</a>
+									<a href="#" class="genric-btn primary-border circle arrow">RSDS</a>
+									<a href="#" class="genric-btn primary-border circle arrow">IA</a>
+								</div>
+								</center>
+								
+							</div>
+							
 						</div>
-					</div>						
+						
+					</div>
+											
 					<div class="row">
 						<div class="single-popular-carusel col-lg-4 col-md-6">
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>	
-									<img class="img-fluid" src="img/projets/bigdata.jpg" alt="">
+									<img class="img-fluid" src="{{asset('uploads/projets/bigdata.jpg')}}" alt="">
 								</div>
 								<div class="meta d-flex justify-content-between">
-									<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 3 membre(s) </p>
+									<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 3 membre(s) </p>
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
@@ -64,10 +78,10 @@
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>	
-									<img class="img-fluid" src="img/projets/securite.png" alt="">
+									<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
 								</div>
 								<div class="meta d-flex justify-content-between">
-									<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 4 membre(s) </p>
+									<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 4 membre(s) </p>
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
@@ -88,10 +102,10 @@
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>	
-									<img class="img-fluid" src="img/projets/erp.jpg" alt="">
+									<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
 								</div>
 								<div class="meta d-flex justify-content-between">
-									<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 2 membre(s) </p>
+									<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 2 membre(s) </p>
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
@@ -112,10 +126,10 @@
 								<div class="thumb-wrap relative">
 									<div class="thumb relative">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-fluid" src="img/projets/bigdata.jpg" alt="">
+										<img class="img-fluid" src="{{asset('uploads/projets/bigdata.jpg')}}" alt="">
 									</div>
 									<div class="meta d-flex justify-content-between">
-										<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 1 membre(s) </p>
+										<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
@@ -136,10 +150,10 @@
 								<div class="thumb-wrap relative">
 									<div class="thumb relative">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-fluid" src="img/projets/securite.png" alt="">
+										<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
 									</div>
 									<div class="meta d-flex justify-content-between">
-										<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 1 membre(s) </p>
+										<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
@@ -160,10 +174,10 @@
 								<div class="thumb-wrap relative">
 									<div class="thumb relative">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-fluid" src="img/projets/erp.jpg" alt="">
+										<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
 									</div>
 									<div class="meta d-flex justify-content-between">
-										<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 1 membre(s) </p>
+										<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
@@ -184,10 +198,10 @@
 									<div class="thumb-wrap relative">
 										<div class="thumb relative">
 											<div class="overlay overlay-bg"></div>	
-											<img class="img-fluid" src="img/projets/bigdata.jpg" alt="">
+											<img class="img-fluid" src="{{asset('uploads/projets/bigdata.jpg')}}" alt="">
 										</div>
 										<div class="meta d-flex justify-content-between">
-											<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 1 membre(s) </p>
+											<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
@@ -208,10 +222,10 @@
 									<div class="thumb-wrap relative">
 										<div class="thumb relative">
 											<div class="overlay overlay-bg"></div>	
-											<img class="img-fluid" src="img/projets/securite.png" alt="">
+											<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
 										</div>
 										<div class="meta d-flex justify-content-between">
-											<p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 1 membre(s) </p>
+											<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
