@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-    <!-- Start events-list Area -->
+    <!-- Start articles-list Area -->
     <section class="events-list-area section-gap event-page-lists">
         <div class="container">
 
@@ -145,5 +145,5 @@
             </div>
         </div>	
     </section>
-    <!-- End events-list Area -->
+    <!-- End articles-list Area -->
 @endsection
