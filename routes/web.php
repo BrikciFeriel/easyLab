@@ -64,6 +64,10 @@ Route::get('/frontOffice/articles', function () {
     return view('frontOffice/articles');
 });
 
+Route::get('/frontOffice/detailArticle', function () {
+    return view('frontOffice/detailArticle');
+});
+
 
  
  //backoffice

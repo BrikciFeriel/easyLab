@@ -25,14 +25,14 @@
 							<div class="title text-center">
 								<h1 class="mb-10">Liste des projets</h1>
 							</div>
-							<span class="widget-wrap">
+							
 								<div class=" search-widget">
 									<form class="search-form" action="#">
 										<input placeholder="Rechercher un projet" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
 										<button type="submit"><i class="fa fa-search"></i></button>
 									</form>
 								</div>
-							</span>
+						
 							<div class="pb-40 col-lg-12  justify-content-center">
 								<center>
 									<div class="button-group-area ">
