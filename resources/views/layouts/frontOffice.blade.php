@@ -67,11 +67,12 @@
 			        </form>
 			      </div>
 			   
-			      <div class="col-md-6">
+			      <div class="col-md-7">
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="{{url('frontOffice')}}">Accueil</a></li>
-			          <li><a href="{{url('frontOffice/aprpos')}}">A propos</a></li>
+			          <li><a href="{{url('frontOffice/actualites')}}">Actualités</a></li>
+			          <li><a href="{{url('frontOffice/apropos')}}">A propos</a></li>
 			          <li><a href="{{url('frontOffice/equipes')}}">Equipes</a></li>
 			          <li><a href="{{url('frontOffice/membres')}}">Membres</a></li>
 			          <li><a href="{{url('frontOffice/projets')}}">Projets</a></li>
@@ -86,7 +87,9 @@
 		    </div>
 		</header><!-- #header -->
 
-		@yield('banner')
+
+				@yield('banner')
+
 
 
 @yield('content')

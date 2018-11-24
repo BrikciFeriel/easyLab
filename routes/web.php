@@ -27,7 +27,13 @@ Route::get('/', function () {
 Route::get('/frontOffice/equipes', function () {
     return view('frontOffice/equipes');
 });
+
 Route::get('/frontOffice/membres', 'FrontController@membres');
+Route::get('/frontOffice/{id}/details','FrontController@detailmembre');
+
+Route::get('/frontOffice/detailsEquipe', function () {
+    return view('frontOffice/detailsEquipe');
+});
 
 Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
@@ -37,10 +43,30 @@ Route::get('/frontOffice/profil', function () {
     return view('frontOffice/profilMembre');
 });
 
+
 Route::get('/frontOffice', function () {
     return view('frontOffice/accueil');
 });
-	// backoffice
+
+Route::get('/frontOffice/projets', function () {
+    return view('frontOffice/projets');
+});
+
+Route::get('/frontOffice/detailProjet', function () {
+    return view('frontOffice/detailProjet');
+});
+
+Route::get('/frontOffice/apropos', function () {
+    return view('frontOffice/apropos');
+});
+
+Route::get('/frontOffice/articles', function () {
+    return view('frontOffice/articles');
+});
+
+
+ 
+ //backoffice
 
 Route::get('dashboard','dashController@index');
 Route::get('parametre','ParametreController@create');
