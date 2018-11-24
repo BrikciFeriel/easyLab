@@ -9,7 +9,7 @@
                     <h1 class="text-white">
                         Projets	
                     </h1>	
-                    <p class="text-white link-nav"><a href="index.html">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="courses.html"> Projets</a></p>
+                    <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/projets')}}"> Projets</a></p>
                 </div>	
             </div>
         </div>
@@ -61,7 +61,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="course-details.html">
+								<a href="{{url('/frontOffice/detailProjet')}}">
 									<h4>
 										Big Data
 									</h4>
@@ -78,7 +78,7 @@
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>	
-									<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
+									<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
 								</div>
 								<div class="meta d-flex justify-content-between">
 									<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 4 membre(s) </p>
@@ -102,7 +102,7 @@
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>	
-									<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
+									<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
 								</div>
 								<div class="meta d-flex justify-content-between">
 									<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 2 membre(s) </p>
@@ -150,7 +150,7 @@
 								<div class="thumb-wrap relative">
 									<div class="thumb relative">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
+										<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
 									</div>
 									<div class="meta d-flex justify-content-between">
 										<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>
@@ -174,7 +174,7 @@
 								<div class="thumb-wrap relative">
 									<div class="thumb relative">
 										<div class="overlay overlay-bg"></div>	
-										<img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
+										<img class="img-fluid" src="{{asset('uploads/projets/securite.png')}}" alt="">
 									</div>
 									<div class="meta d-flex justify-content-between">
 										<p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 1 membre(s) </p>

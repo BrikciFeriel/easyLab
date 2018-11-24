@@ -51,6 +51,17 @@ Route::get('/frontOffice/projets', function () {
     return view('frontOffice/projets');
 });
 
+Route::get('/frontOffice/detailProjet', function () {
+    return view('frontOffice/detailProjet');
+});
+
+Route::get('/frontOffice/apropos', function () {
+    return view('frontOffice/apropos');
+});
+
+Route::get('/frontOffice/articles', function () {
+    return view('frontOffice/articles');
+});
 
 
  
