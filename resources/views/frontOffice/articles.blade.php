@@ -61,7 +61,7 @@
                         </div>
                         <div class="detials col-12 col-md-6">
                             <p>avril, 2013</p>
-                            <a href="{{url('/frontOffice/detailArticle')}}"><h4>A Reference Model for Educational Adaptive Web Applications</h4></a>
+                            <a href="{{url('/frontOffice/detailsArticle')}}"><h4>A Reference Model for Educational Adaptive Web Applications</h4></a>
                             <p>
                                 A Reference Model for Educational Adaptive Web Applications. 
                                 in Intelligent and Adaptive Educational-Learning Systems, Springer Berlin Heidelberg									</p>

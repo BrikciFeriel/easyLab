@@ -53,7 +53,7 @@ Route::get('/frontOffice/projets', function () {
 });
 
 Route::get('/frontOffice/detailProjet', function () {
-    return view('frontOffice/detailProjet');
+    return view('frontOffice/detailsProjet');
 });
 
 Route::get('/frontOffice/apropos', function () {
@@ -75,7 +75,7 @@ Route::get('/frontOffice/detailsActualite', function () {
 
 
 Route::get('/frontOffice/detailArticle', function () {
-    return view('frontOffice/detailArticle');
+    return view('frontOffice/detailsArticle');
 });
 
 

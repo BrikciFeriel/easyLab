@@ -9,7 +9,7 @@
                     <h1 class="text-white">
                         Articles	
                     </h1>	
-                    <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/articles')}}"> Articles<span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/detailArticle')}}"> Détail article</a></p>
+                    <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/articles')}}"> Articles<span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/detailsArticle')}}"> Détails</a></p>
                 </div>	
             </div>
         </div>

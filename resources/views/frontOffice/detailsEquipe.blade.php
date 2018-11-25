@@ -204,7 +204,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="{{url('frontOffice/detailProjet')}}">
+								<a href="{{url('frontOffice/detailsProjet')}}">
 									<h4>
 										Big Data
 									</h4>
@@ -228,7 +228,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="{{url('frontOffice/detailProjet')}}">
+								<a href="{{url('frontOffice/detailsProjet')}}">
 									<h4>
 										ERP (Enterprise Resource Planning)
 									</h4>
@@ -252,7 +252,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="{{url('frontOffice/detailProjet')}}">
+								<a href="{{url('frontOffice/detailsProjet')}}">
 									<h4>
 										La cybersécurité
 									</h4>
@@ -276,7 +276,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="{{url('frontOffice/detailProjet')}}">
+									<a href="{{url('frontOffice/detailsProjet')}}">
 										<h4>
 											Big Data
 										</h4>
@@ -301,7 +301,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="{{url('frontOffice/detailProjet')}}">
+									<a href="{{url('frontOffice/detailsProjet')}}">
 										<h4>
 											ERP (Enterprise Resource Planning)
 										</h4>
@@ -326,7 +326,7 @@
 									</div>									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="{{url('frontOffice/detailProjet')}}">
+									<a href="{{url('frontOffice/detailsProjet')}}">
 										<h4>
 											La cybersécurité
 										</h4>
@@ -351,7 +351,7 @@
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
-										<a href="{{url('frontOffice/detailProjet')}}">
+										<a href="{{url('frontOffice/detailsProjet')}}">
 											<h4>
 												Big Data
 											</h4>
@@ -376,7 +376,7 @@
 										</div>									
 									</div>
 									<div class="details" style="height:50px;">
-										<a href="{{url('frontOffice/detailProjet')}}">
+										<a href="{{url('frontOffice/detailsProjet')}}">
 											<h4>
 												ERP (Enterprise Resource Planning)
 											</h4>

@@ -61,7 +61,7 @@
 								</div>									
 							</div>
 							<div class="details" style="height:50px;">
-								<a href="{{url('/frontOffice/detailProjet')}}">
+								<a href="{{url('/frontOffice/detailsProjet')}}">
 									<h4>
 										Big Data
 									</h4>

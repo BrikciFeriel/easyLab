@@ -8,9 +8,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Nous Contactez			
+								Contactez nous			
 							</h1>	
-							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="about.html">Contact</a></p>
+							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil   </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/contact')}}">Contact</a></p>
 						</div>	
 					</div>
 				</div>
