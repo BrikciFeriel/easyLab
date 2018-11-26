@@ -56,7 +56,7 @@
 
 
     <!-- Start review Area -->
-    <center><h1>Nos spécialités</h1></center>
+    <center><h1>Nos équipes</h1></center>
     <section class="review-area section-gap relative">
         <div class="overlay overlay-bg"></div>
         <div class="container">				
