@@ -23,7 +23,7 @@
 			<section class="contact-page-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="map-wrap col-lg-8" style="width:100%; height: 445px;" id="map"></div>
+						<div class="map-wrap col-lg-7" style="width:100%; height: 445px;" id="map"></div>
 						<div class="col-lg-4 d-flex flex-column address-wrap" style="padding-top: 100px">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">

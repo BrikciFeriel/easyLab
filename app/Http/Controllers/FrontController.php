@@ -26,4 +26,10 @@ class FrontController extends Controller
             
         ]);;
     } 
+
+    public function equipes(){
+
+        $equipes = User::all();
+        return view('frontOffice.equipes' , ['equipes' => $equipes]);
+    }
 }
