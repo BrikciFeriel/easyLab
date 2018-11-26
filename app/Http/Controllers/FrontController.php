@@ -15,7 +15,7 @@ class FrontController extends Controller
         return view('frontOffice.membres' , ['membres' => $membres]);
     }
 
-    public function detailmembre($id)
+    public function detailsMembre($id)
     {
         $membre = User::find($id);
         $equipes = Equipe::all();

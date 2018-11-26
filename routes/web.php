@@ -25,56 +25,61 @@ Route::get('/', function () {
 	// frontOffice
 
 Route::get('/frontOffice/equipes', 'FrontController@equipes');
-
 Route::get('/frontOffice/membres', 'FrontController@membres');
-Route::get('/frontOffice/{id}/details','FrontController@detailmembre');
+Route::get('/frontOffice/{id}/details','FrontController@detailsMembre');
 
-Route::get('/frontOffice/detailsEquipe', function () {
-    return view('frontOffice/detailsEquipe');
-});
+Route::get('/frontOffice/equipe/{id}/details','FrontController@detailsEquipe');
+// Route::get('/frontOffice/detailsEquipe', function () {
+//     return view('frontOffice/detailsEquipe');
+// });
 
+//statique
 Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
 });
 
-Route::get('/frontOffice/profil', function () {
-    return view('frontOffice/profilMembre');
-});
+Route::get('/frontOffice', 'FrontController@accueil');
+// Route::get('/frontOffice', function () {
+//     return view('frontOffice/accueil');
+// });
+
+Route::get('/frontOffice/projets', 'FrontController@projets');
+// Route::get('/frontOffice/projets', function () {
+//     return view('frontOffice/projets');
+// });
+
+Route::get('/frontOffice/projet/{id}/details','FrontController@detailsProjet');
+// Route::get('/frontOffice/detailsProjet', function () {
+//     return view('frontOffice/detailsProjet');
+// });
 
 
-Route::get('/frontOffice', function () {
-    return view('frontOffice/accueil');
-});
-
-Route::get('/frontOffice/projets', function () {
-    return view('frontOffice/projets');
-});
-
-Route::get('/frontOffice/detailsProjet', function () {
-    return view('frontOffice/detailsProjet');
-});
-
+//statique
 Route::get('/frontOffice/apropos', function () {
     return view('frontOffice/apropos');
 });
 
-Route::get('/frontOffice/articles', function () {
-    return view('frontOffice/articles');
-});
+Route::get('/frontOffice/articles','FrontController@articles');
+// Route::get('/frontOffice/articles', function () {
+//     return view('frontOffice/articles');
+// });
+
+Route::get('/frontOffice/article/{id}/details','FrontController@detailsArticle');
+// Route::get('/frontOffice/detailsArticle', function () {
+//     return view('frontOffice/detailsArticle');
+// });
+
+Route::get('/frontOffice/actualites','FrontController@actualites');
+// Route::get('/frontOffice/actualites', function () {
+//     return view('frontOffice/actualites');
+// });
+
+Route::get('/frontOffice/actualite/{id}/details','FrontController@detailsActualite');
+// Route::get('/frontOffice/detailsActualite', function () {
+//     return view('frontOffice/detailsActualite');
+// });
 
 
-Route::get('/frontOffice/actualites', function () {
-    return view('frontOffice/actualites');
-});
-
-Route::get('/frontOffice/detailsActualite', function () {
-    return view('frontOffice/detailsActualite');
-});
-
-
-Route::get('/frontOffice/detailsArticle', function () {
-    return view('frontOffice/detailsArticle');
-});
 
 
  
