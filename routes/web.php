@@ -61,13 +61,13 @@ Route::get('/frontOffice/apropos', function () {
 
 Route::get('/frontOffice/articles','FrontController@articles');
 // Route::get('/frontOffice/articles', function () {
-//     return view('frontOffice/articles');
+//   return view('frontOffice/articles');
 // });
 
 Route::get('/frontOffice/article/{id}/details','FrontController@detailsArticle');
 // Route::get('/frontOffice/detailsArticle', function () {
-//     return view('frontOffice/detailsArticle');
-// });
+//   return view('frontOffice/detailsArticle');
+ //});
 
 Route::get('/frontOffice/actualites','FrontController@actualites');
 // Route::get('/frontOffice/actualites', function () {

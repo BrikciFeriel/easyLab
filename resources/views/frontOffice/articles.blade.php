@@ -54,93 +54,48 @@
             </div>
 
             <div class="row align-items-center">
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/informatique.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p>avril, 2013</p>
-                            <a href="{{url('/frontOffice/detailsArticle')}}"><h4>A Reference Model for Educational Adaptive Web Applications</h4></a>
-                            <p>
-                                A Reference Model for Educational Adaptive Web Applications. 
-                                in Intelligent and Adaptive Educational-Learning Systems, Springer Berlin Heidelberg									</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/maths.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p> Aout, 2018</p>
-                            <a href="event-details.html"><h4>Mathématique et Informatique</h4></a>
-                            <p>
-                                nous examinerons ici la manière dont informatique fondamentale et sciences mathématiques sont intimement liées 
-                                tout autant dans leur développement récent que dans un futur prévisible.									</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/Dmedical.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p>Janvier 2015</p>
-                            <a href="event-details.html"><h4>The Universe Through
-                            A Child S Eyes</h4></a>
-                            <p>
-                                For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/maths.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p> Aout, 2018</p>
-                            <a href="event-details.html"><h4>Mathématique et Informatique</h4></a>
-                            <p>
-                                nous examinerons ici la manière dont informatique fondamentale et sciences mathématiques sont intimement liées 
-                                tout autant dans leur développement récent que dans un futur prévisible.									</p>
+                @foreach($articles as $article)
+                    <div class="col-lg-6 pb-30">
+                        <div class="single-carusel row align-items-center">
+                            <div class="col-12 col-md-6 thumb">
+                                @if($article->type =="Brevet")
+                                <img class="img-fluid" src="{{asset('uploads/articles/brevet.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Livre")
+                                <img class="img-fluid" src="{{asset('uploads/articles/livre.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Article long")
+                                <img class="img-fluid" src="{{asset('uploads/articles/article_long.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Article court")
+                                <img class="img-fluid" src="{{asset('uploads/articles/article_court.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Publication(Revue)")
+                                <img class="img-fluid" src="{{asset('uploads/articles/publication.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Chapitre d'un livre")
+                                <img class="img-fluid" src="{{asset('uploads/articles/chapitre.jpg')}}" alt="">
+                                @endif
+
+                                @if($article->type=="Poster")
+                                <img class="img-fluid" src="{{asset('uploads/articles/poster.jpg')}}" alt="">
+                                @endif
+                            </div>
+                            <div class="detials col-12 col-md-6">
+                                <p>{{$article->mois}}, {{$article->annee}}</p>
+                                <a href="{{url('frontOffice/article/'.$article->id.'/details')}}"><h4>{{$article->titre}}</h4></a>
+                                <p>
+                                    {{$article->resume}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/informatique.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p>avril, 2013</p>
-                            <a href="event-details.html"><h4>A Reference Model for Educational Adaptive Web Applications</h4></a>
-                            <p>
-                                A Reference Model for Educational Adaptive Web Applications. 
-                                in Intelligent and Adaptive Educational-Learning Systems, Springer Berlin Heidelberg									</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pb-30">
-                    <div class="single-carusel row align-items-center">
-                        <div class="col-12 col-md-6 thumb">
-                            <img class="img-fluid" src="{{asset('uploads/articles/Dmedical.jpg')}}" alt="">
-                        </div>
-                        <div class="detials col-12 col-md-6">
-                            <p>Janvier 2015</p>
-                            <a href="event-details.html"><h4>The Universe Through
-                            A Child S Eyes</h4></a>
-                            <p>
-                                For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
+                @endforeach
                         
             </div>
         </div>	

@@ -22,13 +22,19 @@
 <!-- Start course-details Area -->
 <section class="course-details-area pt-60">
 
-    <div class="container-fluid" style="text-align:center;"><h1>Big Data</h1></div>
+    <div class="container-fluid" style="text-align:center;"><h1>{{$projet->intitule}}</h1></div>
     <br><br>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 left-contents">
-                <div class="main-image">
-                    <img class="img-fluid" src={{asset('uploads/detail_projet/bigdata.jpeg')}} alt="">
+                <div class=" super-container main-image justify-content-center">
+                    @if($projet->photo)
+                    {
+                        <img class="img-fluid"  src="{{asset($projet->photo)}}" alt="" style=" height:300px;width:500px;">
+                    }	
+                    @else	
+                    <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="" style="height:300px;width:500px">
+                    @endif
                 </div>
                 <div class="jq-tab-wrapper" id="horizontalTab">
                     <div class="jq-tab-menu">
@@ -40,33 +46,20 @@
                     <div class="jq-tab-content-wrapper">
                         <div class="jq-tab-content active" data-tab="1">
                             <div class="tab_panel_text">
-                                <p>La plupart des entreprises se contentent d'exploiter une part réduite des informations
-                                     générées et recoltées dans leur SI pour produire toujours les mêmes rapports. 
-                                     Pourtant, les possibilités ouvertes par le mouvement Big Data sont alléchantes :
+                                <p>
+                                    {{$projet->resume}}
                                 </p>
-                            </div>
-                            <div class="tab_panel_section">
-                                <ul>
-                                    <li>-> Tracer des comportements d'achat pour détecter les fraudes potentielles au milieu de millions de transactions.</li>
-                                    <li>-> Tracer des comportements d'achat pour détecter les fraudes potentielles au milieu de millions de transactions.</li>
-                                    <li>-> Tirer parti des dialogues continus du web social pour surveiller des tendances, pour faire de la veille ou de la prévision.</li>
-                                </ul>
                             </div>
                         </div>
                         <div class="jq-tab-content" data-tab="2">
                             <ul class="course-list">
-                                
+                                <h6>Lien</h6>
                                 <li class="justify-content-between d-flex">
-                                    <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
+                                    <a class=" " href="{{$projet->lien}}"><i class="fas fa-link"></i> {{$projet->lien}}</a>
                                 </li>
+                                <h6>Fichier</h6>
                                 <li class="justify-content-between d-flex">
-                                    <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
+                                    <a class=" " href="{{asset($projet->detail)}}"><i class="fas fa-file-pdf"></i> {{$projet->detail}}</a>
                                 </li>
 
                             </ul>
@@ -78,33 +71,20 @@
 
                                             <div class="text-center">
                                                 <div >
-                                                    <img class="rounded-circle" src="{{asset('uploads/photo/avatar5.png')}}" alt="" style="width: 120px; ">
-                                                    <a href="#"><h4> Mr Hadjila Fethallah</h4></a>
+                                                    <img class="rounded-circle" src="{{asset($projet->chef->photo)}}" alt="" style="width: 120px; ">
+                                                    <a href="#"><h4> {{ $projet->chef->name}} {{ $projet->chef->prenom}}</h4></a>
                                                         <p>(Chef du projet)</p>
                                             </div>
                                             <br><br>
                                             <div class="row container">
-
+                                                @foreach($membres as $membre)
                                                 <div class="col-md-4">
-                                                    <div class="text-center">
-                                                    <img class="rounded-circle" src="{{asset('uploads/team/ChikhAzeddine.jpg')}}" alt="" style="width: 110px; margin-bottom: 10px ">
-                                                    <a href="#"><h4>ChikhAzeddiner</h4></a>
+                                                        <div class="text-center container">
+                                                        <img class="rounded-circle" src="{{asset($membre->photo)}}" alt="" style="width: 110px; margin-bottom: 10px ">
+                                                        <a href="{{url('frontOffice/'.$membre->id.'/details')}}"><h4>{{$membre->name}} {{$membre->prenom}}</</h4></a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                
-                                                <div class="col-md-4">
-                                                    <div class="text-center">
-                                                    <img class="rounded-circle" src="{{asset('uploads/team/ChikhAzeddine.jpg')}}" alt="" style="width: 110px; margin-bottom: 10px ">
-                                                    <a href="#"><h4>ChikhAzeddiner</h4></a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="text-center">
-                                                    <img class="rounded-circle" src="{{asset('uploads/team/ChikhAzeddine.jpg')}}" alt="" style="width: 110px; margin-bottom: 10px ">
-                                                    <a href="#"><h4>ChikhAzeddiner</h4></a>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
                             
                                     </section>
@@ -171,28 +151,28 @@
                     <li>
                         <a class="justify-content-between d-flex" href="#">
                             <h5> <i class="fas fa-calendar-alt"></i> Date début</h5>
-                            <p> 21  Novembre 2018</p>
+                            <p> {{$projet->date_debut}}</p>
                         </a>
                     </li>
                     <li>
                         <a class="justify-content-between d-flex" href="#">
                             <h5> <i class="fas fa-calendar-alt"></i> Date fin</h5>
-                            <p> 21  Janvier 2019</p>
+                            <p> {{$projet->date_fin}}</p>
                         </a>
                     </li>
                     <li>
-                        <a class="justify-content-between d-flex" href="#">
+                        <a class="justify-content-between d-flex" href="{{url('frontOffice/'.$projet->chef_id.'/details')}}">
                             <h5> <i class="fas fa-user-tie"></i> Chef de projet</h5>
-                            <p>Mr Hadjila Fethallah</p>
+                        <p>{{$projet->chef->name}} {{$projet->chef->prenom}}</p>
                         </a>
                     </li>
                     <li class="justify-content-between d-flex" >
                             <h5> <i class="fas fa-ellipsis-v"></i> Type </h5>
-                            <span style="color:black"> Article long</span>
+                            <span style="color:black"> {{$projet->type}}</span>
                     </li>
                     <li class="justify-content-between d-flex">
                             <h5> <i class="fas fa-list-ul"></i> Theme </h5>
-                            <span style="color:black">Intelligence artificielle</span>
+                            <span style="color:black">{{$projet->theme}}</span>
                     </li>
                 </ul>
             </div>
@@ -203,6 +183,7 @@
 
 
 <!-- Start popular-courses Area --> 
+
     <section class="popular-courses-area section-gap courses-page">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -211,105 +192,52 @@
                         <h1 class="mb-10">Projets similaires</h1>
                     </div>
                 </div>
-            </div>						
-            <div class="row">
-                    <div class="single-popular-carusel col-lg-3 col-md-6">
-                        <div class="thumb-wrap relative">
-                            <div class="thumb relative">
-                                <div class="overlay overlay-bg"></div>	
-                                <img class="img-fluid" src="{{asset('uploads/projets/bigdata.jpg')}}" alt="">
-                            </div>
-                            <div class="meta d-flex justify-content-between">
-                                <p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> 3 membre(s) </p>
-                            </div>									
-                        </div>
-                        <div class="details" style="height:50px;">
-                            <a href="course-details.html">
-                                <h4>
-                                    Big Data
-                                </h4>
-                            </a>
-                        </div>
-                        <hr>
-                        <div>
-                            <a href="#">
-                                <h6><i class="fas fa-user-tie"></i> Mr Hadjila Fethallah </h6> 										
-                            </a>
-                        </div>
-                    </div>	
-                    <div class="single-popular-carusel col-lg-3 col-md-6">
-                        <div class="thumb-wrap relative">
-                            <div class="thumb relative">
-                                <div class="overlay overlay-bg"></div>	
-                                <img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
-                            </div>
-                            <div class="meta d-flex justify-content-between">
-                                <p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 4 membre(s) </p>
-                            </div>									
-                        </div>
-                        <div class="details" style="height:50px;">
-                            <a href="course-details.html">
-                                <h4>
-                                    ERP (Enterprise Resource Planning)
-                                </h4>
-                            </a>
-                        </div>
-                            <hr>
-                        <div>
-                            <p>
-                                Mr Messabihi Mohammed										
-                            </p>
-                        </div>
-                    </div>
-                    <div class="single-popular-carusel col-lg-3 col-md-6">
-                        <div class="thumb-wrap relative">
-                            <div class="thumb relative">
-                                <div class="overlay overlay-bg"></div>	
-                                <img class="img-fluid" src="{{asset('uploads/projets/bigdata.jpg')}}" alt="">
-                            </div>
-                            <div class="meta d-flex justify-content-between">
-                                <p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 6 membre(s) </p>
-                            </div>									
-                        </div>
-                        <div class="details" style="height:50px;">
-                            <a href="course-details.html">
-                                <h4>
-                                    Big Data
-                                </h4>
-                            </a>
-                        </div>
-                            <hr>
-                        <div>
-                            <p>
-                                Mr Tadlaoui Mohammed										
-                            </p>
-                        </div>
-                    </div>	
-                    <div class="single-popular-carusel col-lg-3 col-md-6">
-                        <div class="thumb-wrap relative">
-                            <div class="thumb relative">
-                                <div class="overlay overlay-bg"></div>	
-                                <img class="img-fluid" src="{{asset('uploads/projets/erp.jpg')}}" alt="">
-                            </div>
-                            <div class="meta d-flex justify-content-between">
-                                <p style="color:rgb(33, 117, 185);"><span class="lnr lnr-users"></span> 4 membre(s) </p>
-                            </div>									
-                        </div>
-                        <div class="details" style="height:50px;">
-                            <a href="course-details.html">
-                                <h4>
-                                    ERP (Enterprise Resource Planning)
-                                </h4>
-                            </a>
-                        </div>
-                            <hr>
-                        <div>
-                            <p>
-                                Mr Messabihi Mohammed										
-                            </p>
-                        </div>
-                    </div>	
             </div>
+            @if($projets_similaires)
+                    
+                <div class="row">
+                    @foreach($projets_similaires as $projet_similaire)
+                        @if($projet_similaire->id != $projet->id)
+                            <div class="single-popular-carusel col-lg-4 col-md-6">
+                                <div class="thumb-wrap relative">
+                                    <div class="thumb relative">
+                                        <div class="overlay overlay-bg"></div>
+                                                
+                                        @if($projet_similaire->photo)
+                                        {
+                                            <img class="img-fluid"  src="{{asset($projet_similaire->photo)}}" alt="">	
+                                        }	
+                                        @else	
+                                        <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="">
+                                        @endif
+                                    </div>
+                                    @foreach($nbr as $nbrs)
+                                            @if($nbrs->projet_id == $projet_similaire->id)
+                                                <div class="meta d-flex justify-content-between">
+                                                    <p style="color:rgb(33, 117, 185);"><i class="fas fa-users"></i> {{$nbrs->total}} membre(s) </p>
+                                                </div>	
+                                            @endif
+                                    @endforeach									
+                                </div>
+                                <div class="details" style="height:50px;">
+                                    <a href="{{url('frontOffice/projet/'.$projet_similaire->id.'/details')}}">
+                                        <h4>
+                                            {{ $projet_similaire->intitule }}
+                                        </h4>
+                                    </a>
+                                </div>
+                                <hr>
+                                <div>
+                                    <a href="{{url('frontOffice/'.$projet_similaire->chef_id.'/details')}}">
+                                        <h6><i class="fas fa-user-tie"></i> {{ $projet_similaire->chef->name}} {{ $projet_similaire->chef->prenom}} </h6> 										
+                                    </a>
+                                </div>
+                                
+                            </div>	
+                        @endif	
+                @endforeach  
+                </div>
+            @endif
         </div>	
     </section>
     <!-- End popular-courses Area -->

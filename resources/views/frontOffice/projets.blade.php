@@ -74,7 +74,7 @@
 									@endforeach									
 								</div>
 								<div class="details" style="height:50px;">
-									<a href="course-details.html">
+									<a href="{{url('frontOffice/projet/'.$projet->id.'/details')}}">
 										<h4>
 											{{ $projet->intitule }}
 										</h4>
@@ -82,7 +82,7 @@
 								</div>
 								<hr>
 								<div>
-									<a href="#">
+									<a href="{{url('frontOffice/'.$projet->chef_id.'/details')}}">
 										<h6><i class="fas fa-user-tie"></i> {{ $projet->chef->name}} {{ $projet->chef->prenom}} </h6> 										
 									</a>
 								</div>

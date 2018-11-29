@@ -8,6 +8,7 @@ use App\User;
 use App\Equipe;
 use App\ProjetUser;
 use App\Projet;
+use App\Article;
 
 class FrontController extends Controller
 {
@@ -45,5 +46,37 @@ class FrontController extends Controller
             'projets' => $projets,
             'nbr' => $nbr,
             ]);    	
+    }
+
+    public function detailsProjet($id)
+    {
+        $projet = Projet::find($id);
+        $membres = Projet::find($id)->users()->orderBy('name')->get();
+        $projets_similaires = Projet::where('theme',$projet->theme)->get();
+        $nbr = DB::table('projet_user')
+             ->select( DB::raw('count(user_id) as total,projet_id'))
+             ->groupBy('projet_id')
+             ->get();
+        return view('frontOffice.detailsProjet')->with([
+            'projet' => $projet,
+            'membres'=>$membres,
+            'projets_similaires'=>$projets_similaires,
+            'nbr' => $nbr,
+        ]);;
+    }
+
+    public function articles(){
+    	$articles = Article::all();
+    	return view('frontOffice.articles' , ['articles' => $articles,]);    	
+    }
+
+    public function detailsArticle($id)
+    {
+        $article = Article::find($id);
+        $participants = Article::find($id)->users()->orderBy('name')->get();
+        return view('frontOffice.detailsArticle')->with([
+            'article' => $article,
+            'participants'=>$participants,
+        ]);;
     }
 }

@@ -19,6 +19,8 @@
 @section('content')
 <!-- Start article-details Area -->
 <section class="event-details-area section-gap">
+    <div class="container-fluid" style="text-align:center;"><h1>{{$article->titre}}</h1></div>
+    <br><br>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 event-details-left">
@@ -36,8 +38,7 @@
                                 </div>
                                 <div class="jq-tab-content-wrapper">
                                     <div class="jq-tab-content active" data-tab="1">
-                                        A Reference Model for Educational Adaptive Web Applications. 
-                                        in Intelligent and Adaptive Educational-Learning Systems, Springer Berlin Heidelberg	
+                                        {{$article->resume}}	
                                     </div>
                                     <div class="jq-tab-content" data-tab="2">
                                             <section class="about_area p_120">
@@ -45,27 +46,20 @@
                                                 <div class="container">
 
                                                     <div class="row container">
-
-                                                        <div class="col-md-4">
-                                                            <div class="text-center">
-                                                            <img class="rounded-circle" src="{{asset('uploads/team/ChikhAzeddine.jpg')}}" alt="" style="width: 110px; margin-bottom: 10px ">
-                                                            <a href="#"><h4>ChikhAzeddiner</h4></a>
+                                                        @foreach($participants as $participant)
+                                                            <div class="col-md-4">
+                                                                <div class="text-center">
+                                                                <img class="rounded-circle" src="{{asset($participant->photo)}}" alt="" style="width: 110px; margin-bottom: 10px ">
+                                                                <a href="{{url('frontOffice/'.$participant->id.'/details')}}"><h4>{{$participant->name}} {{$participant->prenom}}</h4></a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        
-                                                        <div class="col-md-4">
-                                                            <div class="text-center">
-                                                            <img class="rounded-circle" src="{{asset('uploads/team/MohammedMessabihi.jpg')}}" alt="" style="width: 110px; margin-bottom: 10px ">
-                                                            <a href="#"><h4>Mohammed Messabihi</h4></a>
-                                                            </div>
-                                                        </div>
+                                                        @endforeach
 
                                                     </div>
-                                                    <br>
+                                                    <br><br>
                                                     <div class=" container">
                                                         <h5>-> Participants externes</h5>
-                                                         <br>
-                                                        <p>S. Georges, K. Sehaba</p>
+                                                        <p>{{$article->membres_ext}}</p>
                                                     </div>
                                                     
                                                 </div>
@@ -76,18 +70,10 @@
                                         <ul class="course-list">
                             
                                             <li class="justify-content-between d-flex">
-                                                <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
+                                                @if($article->detail)
+                                                <a class=" " href="{{asset($article->detail)}}"><i class="fas fa-file-pdf"></i>{{$article->detail}}</a>
+                                                @endif
                                             </li>
-                                            <li class="justify-content-between d-flex">
-                                                <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
-                                            </li>
-                                            <li class="justify-content-between d-flex">
-                                                <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
-                                            </li>
-                                            <li class="justify-content-between d-flex">
-                                                <a class=" " href="#"><i class="fas fa-file-pdf"></i> Ce ci est un fichier PDF</a>
-                                            </li>
-
                                         </ul>
                                 
                                     </div>
@@ -104,16 +90,20 @@
                     <ul class="mt-10">
                         <li class="justify-content-between d-flex">
                             <span>Type</span>
-                            <span>Article long</span>
+                            <span>{{$article->type}}</span>
                         </li>
-                        <li class="justify-content-between d-flex">
-                            <span>Nom de la conférence</span>
-                            <span>EIAH 2015</span>
-                        </li>
-                        <li class="justify-content-between d-flex">
-                            <span>Nom du journal</span>
-                            <span></span>
-                        </li>														
+                        @if($article->conference)
+                            <li class="justify-content-between d-flex">
+                                <span>Nom de la conférence</span>
+                                <span>{{$article->conference}}</span>
+                            </li>
+                        @endif
+                        @if($article->journal)
+                            <li class="justify-content-between d-flex">
+                                <span>Nom du journal</span>
+                                <span>{{$article->journal}}</span>
+                            </li>
+                        @endif														
                     </ul>
                 </div>
                 <div class="single-event-details">
@@ -121,20 +111,20 @@
                     <ul class="mt-10">
                         <li class="justify-content-between d-flex">
                             <span>Date</span>
-                            <span>Janvier, 2015</span>
+                            <span>{{$article->mois}}, {{$article->annee}}</span>
                         </li>
                         <li class="justify-content-between d-flex">
                             <span>Ville</span>
-                            <span>Agadir</span>
+                            <span>{{$article->lieu_ville}}</span>
                         </li>
                         <li class="justify-content-between d-flex">
                             <span>Pays</span>
-                            <span>Maroc</span>
+                            <span>{{$article->lieu_pays}}</span>
                         </li>														
                     </ul>
                 </div>
                 <div class="single-event-details">
-                    <h4>Organiser</h4>
+                    <h4>Références</h4>
                     <ul class="mt-10">
                         <li class="justify-content-between d-flex">
                             <span>ISSN</span>
