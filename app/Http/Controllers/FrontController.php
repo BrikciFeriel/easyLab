@@ -9,6 +9,7 @@ use App\Equipe;
 use App\ProjetUser;
 use App\Projet;
 use App\Article;
+use App\Actualite;
 
 class FrontController extends Controller
 {
@@ -78,5 +79,17 @@ class FrontController extends Controller
             'article' => $article,
             'participants'=>$participants,
         ]);;
+    }
+
+    public function actualites()
+    {
+        $actualites= Actualite::all();
+        return view('frontOffice.actualites' , ['actualites' => $actualites]);  
+    }
+
+    public function detailsActualite($id)
+    {
+        $actualite = Actualite::find($id);
+        return view('frontOffice.detailsActualite' , ['actualite' => $actualite]);  
     }
 }
