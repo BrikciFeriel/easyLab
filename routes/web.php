@@ -38,10 +38,10 @@ Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
 });
 
-Route::get('/frontOffice', 'FrontController@accueil');
-// Route::get('/frontOffice', function () {
-//     return view('frontOffice/accueil');
-// });
+//Route::get('/frontOffice', 'FrontController@accueil');
+ Route::get('/frontOffice', function () {
+     return view('frontOffice/accueil');
+ });
 
 Route::get('/frontOffice/projets', 'FrontController@projets');
 // Route::get('/frontOffice/projets', function () {
@@ -68,6 +68,7 @@ Route::get('/frontOffice/article/{id}/details','FrontController@detailsArticle')
 // Route::get('/frontOffice/detailsArticle', function () {
 //   return view('frontOffice/detailsArticle');
  //});
+
 
 Route::get('/frontOffice/actualites','FrontController@actualites');
 // Route::get('/frontOffice/actualites', function () {

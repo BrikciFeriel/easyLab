@@ -18,4 +18,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testContenuPage()
+    {
+        $response = $this->get('/');
+
+        $response->assertSee(News);
+    }
 }

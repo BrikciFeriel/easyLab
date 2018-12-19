@@ -24,10 +24,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 event-details-left">
-                <div class="main-img">
-                    <img class="img-fluid" src="{{asset('uploads/articles/informatique_detail.jpg')}}" alt="">
-                </div>
-                <div class="container">
                     <div class="row">
                         <div class="col-lg-12 left-contents">
                             <div class="jq-tab-wrapper" id="horizontalTab">
@@ -71,7 +67,7 @@
                             
                                             <li class="justify-content-between d-flex">
                                                 @if($article->detail)
-                                                <a class=" " href="{{asset($article->detail)}}"><i class="fas fa-file-pdf"></i>{{$article->detail}}</a>
+                                                <a href="{{asset($article->detail)}}"><i class="fas fa-file-pdf"></i>{{$article->detail}}</a>
                                                 @endif
                                             </li>
                                         </ul>
@@ -81,9 +77,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
             </div>
+            
             <div class="col-lg-4 event-details-right">
                 <div class="single-event-details">
                     <h4>Details</h4>
@@ -95,13 +91,13 @@
                         @if($article->conference)
                             <li class="justify-content-between d-flex">
                                 <span>Nom de la conférence</span>
-                                <span>{{$article->conference}}</span>
+                                <span style="text-align:right;">{{$article->conference}}</span>
                             </li>
                         @endif
                         @if($article->journal)
                             <li class="justify-content-between d-flex">
                                 <span>Nom du journal</span>
-                                <span>{{$article->journal}}</span>
+                                <span style="text-align:right;">{{$article->journal}}</span>
                             </li>
                         @endif														
                     </ul>
