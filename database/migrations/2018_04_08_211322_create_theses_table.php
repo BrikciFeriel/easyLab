@@ -22,9 +22,9 @@ class CreateThesesTable extends Migration
             $table->string('date_soutenance',40)->nullable();
             $table->string('encadreur_int',150)->nullable();
             $table->string('detail')->nullable();
-            $table->string('encadreur_ext',150)->nullable();
+            //$table->string('encadreur_ext',150)->nullable();
             $table->string('coencadreur_int',150)->nullable();
-            $table->string('coencadreur_ext',150)->nullable();
+            //$table->string('coencadreur_ext',150)->nullable();
             $table->string('membre',150)->nullable();
             $table->timestamps();
         });

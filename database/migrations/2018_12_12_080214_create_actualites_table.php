@@ -19,6 +19,8 @@ class CreateActualitesTable extends Migration
             $table->string('photo')->nullable();
             $table->string('detail')->nullable();
             $table->timestamps();
+
+            $table-> foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

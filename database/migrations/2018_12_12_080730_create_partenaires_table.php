@@ -20,6 +20,8 @@ class CreatePartenairesTable extends Migration
             $table->string('pays')->nullable();
             $table->string('ville')->nullable();
             $table->timestamps();
+
+            
         });
     }
 

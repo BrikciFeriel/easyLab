@@ -31,12 +31,7 @@ class FrontController extends Controller
         ]);;
     } 
 
-    public function equipes(){
-
-        $equipes = User::all();
-        return view('frontOffice.equipes' , ['equipes' => $equipes]);
-    }
-
+  
     public function projets(){
     	$projets = Projet::all();
         $nbr = DB::table('projet_user')
@@ -54,7 +49,7 @@ class FrontController extends Controller
         $projet = Projet::find($id);
         $membres = Projet::find($id)->users()->orderBy('name')->get();
         $projets_similaires = Projet::where('theme',$projet->theme)->get();
-        $nbr = DB::table('projet_user')
+        $nbr = DB::table('projet0_user')
              ->select( DB::raw('count(user_id) as total,projet_id'))
              ->groupBy('projet_id')
              ->get();
@@ -92,4 +87,22 @@ class FrontController extends Controller
         $actualite = Actualite::find($id);
         return view('frontOffice.detailsActualite' , ['actualite' => $actualite]);  
     }
+    public function equipes()
+    {
+        $equipes = Equipe::all();
+        return view('frontOffice.equipes' , ['equipes' => $equipes]);
+    }
+    public function detailsEquipe($id)
+    {
+        $equipe = Equipe::find($id);
+        $membres = Equipe::find($id)->membres()->get();
+       // $projets = Equipe::find($id)->projets()->get();
+
+        return view('frontOffice.detailsEquipe')->with([
+            'equipe' => $equipe ,
+            'membres' => $membres ,
+            //'projets' => $projets,
+        ]);;
+    }
+
 }
