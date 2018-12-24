@@ -18,6 +18,8 @@ class CreateMaterielsTable extends Migration
             $table->string('libelle')->nullable();
             $table->integer('numero')->nullable();
             $table->timestamps();
+
+            $table-> foreign('categorie_id')->references('id')->on('categorie_materiels')->onDelete('set null');
         });
     }
 

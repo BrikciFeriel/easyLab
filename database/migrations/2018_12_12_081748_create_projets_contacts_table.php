@@ -18,6 +18,9 @@ class CreateProjetsContactsTable extends Migration
              $table->integer('projet_id')->unsigned();
             $table->integer('contact_id')->unsigned();
             $table->timestamps();
+
+             $table-> foreign('projet_id')->references('id')->on('projets')->onDelete('set null')->nullable();
+            $table-> foreign('contact_id')->references('id')->on('contacts')->onDelete('set null')->nullable();
         });
     }
 

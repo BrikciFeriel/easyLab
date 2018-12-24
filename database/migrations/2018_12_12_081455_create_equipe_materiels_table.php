@@ -18,6 +18,9 @@ class CreateEquipeMaterielsTable extends Migration
              $table->integer('equipe_id')->unsigned();
             $table->integer('materiel_id')->unsigned();
             $table->timestamps();
+
+             $table-> foreign('equipe_id')->references('id')->on('equipes')->onDelete('set null')->nullable();
+            $table-> foreign('materiel_id')->references('id')->on('materiels')->onDelete('set null')->nullable();
         });
     }
 

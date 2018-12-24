@@ -29,9 +29,10 @@ Route::get('/frontOffice/membres', 'FrontController@membres');
 Route::get('/frontOffice/{id}/details','FrontController@detailsMembre');
 
 Route::get('/frontOffice/equipe/{id}/details','FrontController@detailsEquipe');
-// Route::get('/frontOffice/detailsEquipe', function () {
-//     return view('frontOffice/detailsEquipe');
-// });
+/* Route::get('/frontOffice/detailsEquipe', function () {
+     return view('frontOffice/detailsEquipe');
+ });*/
+ Route::get('/frontOffice/equipes','FrontController@equipes');
 
 //statique
 Route::get('/frontOffice/contact', function () {

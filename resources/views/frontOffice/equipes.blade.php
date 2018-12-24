@@ -60,43 +60,16 @@
 	                                   <section class="upcoming-event-area section-gap">
 											<div class="container">					
 												<div class="row">
+													@foreach($equipes as $equipe)
 													<div class="col-12 col-md-2 thumb">
 													<img class="img-fluid" src="{{asset('sidk.png')}}" alt="">
 													</div>
 													<div class="detials col-12 col-md-4">
 													
-													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>SIDK</h2></a>
-													<p><h4>Système d'information et de connaissance</h4></p>
+													<a href="{{url('/frontOffice/equipe/'.$equipe->id.'/details')}}"><h2>{{$equipe->achronymes}}</h2></a>
+													<p><h4>{{$equipe->intitule}}</h4></p>
 													</div>
-													<div class="col-12 col-md-2 thumb">
-													<img class="img-fluid" src="{{asset('s.jpg')}}" alt="">
-													</div>
-													<div class="detials col-12 col-md-4">
-													
-													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>ILS</h2></a>
-													<p><h4>Ingénierie logicielle sécurisée</h4></p>
-													</div>
-												</div>
-												<div class="row"><p></p></div>
-												
-												<div class="row">
-													<div class="col-12 col-md-2 thumb">
-													<img class="img-fluid" src="{{asset('RSD.jpeg')}}">
-													</div>
-													<div class="detials col-12 col-md-4">
-													<p></p>
-													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>RSDS</h2></a>
-													<p><h4>Réseau, service distribués et systèmes</h4></p>
-													</div>
-													<div class="col-12 col-md-2 thumb">
-													<img class="img-fluid" src="{{asset('IA.jpg')}}" alt="">
-													</div>
-													<div class="detials col-12 col-md-4">
-													
-													<a href="{{url('frontOffice/detailsEquipe')}}"><h2>IA</h2></a>
-													<p><h4>Intelligence artificielle</h4></p>
-													</div>
-																												
+													@endforeach
 												</div>
 												<div class="row"><p></p></div>
 

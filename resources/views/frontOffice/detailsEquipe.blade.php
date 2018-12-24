@@ -7,7 +7,7 @@
 								<div class="row d-flex align-items-center justify-content-center">
 									<div class="about-content col-lg-12">
 										<h1 class="text-white">
-											SIDK		
+											{{$equipe->achronymes}}		
 										</h1>	
 										<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil</a>  <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/equipes')}}">Equipes</a><span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/detailsEquipe')}}">Détails</a></p>
 									</div>	
@@ -35,7 +35,7 @@
 	                                    
 	                                    	<div class="container">
 	                                    		<p style="color: black;"><br><br>
-	                                    			Dans les nouveaux contextes de traitement de l’information les données numériques sont devenues souvent: hétérogènes non ou partiellement structurées volumineuses distribuées/réparties créées en flux continue et rapide Il est devenu impératif de disposer de nouveaux modèles de: représentation, transformation, recherche, recommandation, échange, sécurité, visualisation interprétation des données, qui soient appropriés à ces spécificités.
+	                                    			{{$equipe->resume}}
 	                                    		</p>
 										
 
@@ -49,45 +49,7 @@
 										
 
 											<ol class="ordered-list">
-												<li><span>Utilisation de:</span>
-													<ol class="ordered-list-alpha">
-														<li><span>la théorie des systèmes d’information</span></li>
-														<li><span>l’ingénierie des documents</span></li>
-														<li><span>la technologie des bases de données avancées </span></li>
-														<li><span>la technologie des données semi-structurées en vue de rendre ces données dynamiques, pérennes et évolutives  </span></li>
-													</ol>
-												</li>
-												<li><span>Utilisation de la technologie multimédia pour prendre en charge la diversité des données: données multimédia</span></li>
-												<li><span>Utilisation de: </span>
-													<ol class="ordered-list-alpha">
-														<li><span>l’ingénierie des connaissances</span></li>
-														<li><span>l’ingénierie des connaissances</span></li>
-														<li><span>l’ingénierie ontologique</span></li>
-														<li><span>le web sémantique</span></li>
-														<li><span>les schémas de métadonnées pour rendre ces données sémantiques et contextuelles</span></li>
-													</ol>
-												</li>
-												<li><span>Accès à ces données grâce aux techniques issues des deux domaines :</span>
-													<ol class="ordered-list-alpha">
-														<li><span>IR (Information Retrieval) </span></li>
-														<li><span>RS (Recommender Systems) </span></li>
-													</ol>
-												</li>
-												<li><span>Stockage de ces données dans des entrepôts (Data warehouse) à des fins d’analyse décisionnelle </span></li>
-												<li><span>Echange autour de ces données dans la cadre des <br>
-												</span>
-													<ol class="ordered-list-alpha">
-														<li><span>CoPs (Communities of Practice)</span></li>
-														<li><span>SN (Social networks) et analyse de ces échanges grâce aux technique de : </span>
-															<ol class="ordered-list-roman">
-																<li><span>SNA (Social Network Analysis) </span></li>
-															</ol>
-														</li>
-													</ol>
-												</li>
-												<li><span>-Prise en charge des grandes masses de données dans les environnements Big Data et Cloud Computing </span></li>
-												<li><span>Veille à la Confidentialité, Intégrité, et Disponibilité de données (CIA: Confidentiality, Integrity and Availability) </span></li>
-												<li><span>Utilisation de la technologie « Web Services » et de l’architecture « SOA » pour les différentes solutions proposées.</span></li>
+												{{$equipe->axes_recherche}}
 
 											</ol>
                      				 		</div>
@@ -101,8 +63,8 @@
 											<nav class="col-md-4">
 												<div class="text-center">
 													
-												<img class="rounded-circle" src="{{asset('img/azz.jp')}}g" alt="" style="width: 300px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>CHIKH Azeddine</h4></a>
+												<img class="rounded-circle" src="{{asset($equipe->chef->photo)}}" alt="" style="width: 300px; margin-bottom: 10px ">
+												<a href="{{url('frontOffice/1/details')}}"><h4>{{$equipe->chef->name}} {{$equipe->chef->prenom}}</h4></a>
 
 												</div>
 
@@ -110,79 +72,19 @@
 
 											<div class="col-md-8">
 												<div class="row"> 
+
+												@foreach($membres as $membre)	
 											<div class="col-md-3">
-									
-												<div class="text-center">
 
-												<img class="rounded-circle" src="{{asset('img/tad.jp')}}g" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>TADLAOUI Mohamed</h4></a>
 												
-												</div>
-											</div>													
-
-											<div class="col-md-3 ">
 												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p9.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>DIDI Fedoua</h4></a>
-												
-												</div>
-											</div>
 
-											<div class="col-md-3 " style="margin-bottom: 50px">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p10.jp')}}g" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>MESSABIHI Mohamed</h4></a>
-												
-												</div>
-											</div>
-
-											<div class="col-md-3 ">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p7.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>BENAZZOUZ Mortada</h4></a>
-												
-												</div>
-											</div>
-
-											<div class="col-md-3 ">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p2.png')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>SETTOUTI ahmed Khalid</h4></a>
+												<img class="rounded-circle" src="{{asset($membre->photo)}}" alt="" style="width: 150px; margin-bottom: 10px ">
+												<a href="{{url('frontOffice/1/details')}}"><h4>{{$membre->name}} {{$membre->prenom}}</h4></a>
 												
 												</div>
 											</div>	
-
-											<div class="col-md-3 ">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p6.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>CHIALI Abdelhak</h4></a>
-												
-												</div>
-											</div>	
-
-											<div class="col-md-3 ">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p4.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>MATALLAH Houcine</h4></a>
-												
-												</div>
-											</div>	
-
-											<div class="col-md-3 ">
-												<div class="text-center">
-											
-												<img class="rounded-circle" src="{{asset('img/p8.jpg')}}" alt="" style="width: 150px; margin-bottom: 10px ">
-												<a href="{{url('frontOffice/1/details')}}"><h4>BENMAMMAR Mohamed</h4></a>
-												
-												</div>
-											</div>	
-
+											@endforeach												
 
 												</div>		
 											</div>									
@@ -193,6 +95,15 @@
 										<div class="jq-tab-content" data-tab="4">
 											<div class="container">
 												<div class="row">
+
+
+													
+
+
+
+
+
+													
 						<div class="single-popular-carusel col-lg-4 col-md-6">
 							<div class="thumb-wrap relative">
 								<div class="thumb relative">
