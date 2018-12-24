@@ -20,6 +20,12 @@
           </a>
         </li>
 
+        <li >
+          <a href="{{url('actualites')}}">
+            <i class="glyphicon glyphicon-inbox"></i> <span>Actualités</span>
+          </a>
+        </li>
+
         <li>
           <a href="{{url('equipes')}}">
             <i class="fa fa-group"></i> 

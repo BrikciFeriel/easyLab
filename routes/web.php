@@ -39,9 +39,9 @@ Route::get('/frontOffice/contact', function () {
 });
 
 //Route::get('/frontOffice', 'FrontController@accueil');
- Route::get('/frontOffice', function () {
-     return view('frontOffice/accueil');
- });
+Route::get('/frontOffice', function () {
+    return view('frontOffice/accueil');
+});
 
 Route::get('/frontOffice/projets', 'FrontController@projets');
 // Route::get('/frontOffice/projets', function () {
@@ -71,18 +71,8 @@ Route::get('/frontOffice/article/{id}/details','FrontController@detailsArticle')
 
 
 Route::get('/frontOffice/actualites','FrontController@actualites');
-// Route::get('/frontOffice/actualites', function () {
-//     return view('frontOffice/actualites');
-// });
 
 Route::get('/frontOffice/actualite/{id}/details','FrontController@detailsActualite');
-// Route::get('/frontOffice/detailsActualite', function () {
-//     return view('frontOffice/detailsActualite');
-// });
-
-
-
-
  
  //backoffice
 
@@ -132,6 +122,22 @@ Route::get('projets/{id}/details','ProjetController@details');
 Route::get('projets/{id}/edit','ProjetController@edit');
 Route::put('projets/{id}','ProjetController@update');
 Route::delete('projets/{id}','ProjetController@destroy');
+
+Route::get('actualites','ActualiteController@index');
+Route::get('actualites/create','ActualiteController@create');
+Route::post('actualites','ActualiteController@store');
+Route::get('actualites/{id}/details','ActualiteController@details');
+Route::get('actualites/{id}/edit','ActualiteController@edit');
+Route::put('actualites/{id}','ActualiteController@update');
+Route::delete('actualites/{id}','ActualiteController@destroy');
+
+Route::get('partenaires','PartenaireController@index');
+Route::get('partenaires/create','PartenaireController@create');
+Route::post('partenaires','PartenaireController@store');
+Route::get('partenaires/{id}/details','PartenaireController@details');
+Route::get('partenaires/{id}/edit','PartenaireController@edit');
+Route::put('partenaires/{id}','PartenaireController@update');
+Route::delete('partenaires/{id}','PartenaireController@destroy');
 
 Auth::routes();
 

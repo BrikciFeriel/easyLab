@@ -63,6 +63,12 @@
                                                 <h5>
                                                     <a href="{{url('frontOffice/article/'.$article->id.'/details')}}"><h4>{{$article->titre}}</h4></a>                                                </h5>
                                                 </h5>
+                                                <div class="row container   ">
+                                                    @foreach($article->users as $user)
+                                                        <i><span>{{$user->name}} {{$user->prenom}},</span></i> 
+                                                        &nbsp;
+                                                    @endforeach
+                                                </div>
                                                 <p class="comment">
                                                     {{$article->resume}}
                                                 </p>

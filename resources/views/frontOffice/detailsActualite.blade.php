@@ -7,7 +7,7 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Visualisation interactive de trajectoires 3D en Réalité virtuelle			
+								{{$actualite->titre}}	
 							</h1>	
 							<p class="text-white link-nav"><a href="{{url('frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/actualites')}}"> Actualités</a> <span class="fas fa-angle-right"></span>  <a href="{{url('frontOffice/detailsActualite')}}">Détails</a></p>
 						</div>	
@@ -26,13 +26,10 @@
 							</div>
 							<div class="details-content">
 								
-									<h4>Visualisation interactive de trajectoires 3D en Réalité virtuelle</h4>
+									<h4>{{$actualite->titre}}</h4>
 								
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.									
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolorema gna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.									
+									{{$actualite->detail}}									
 								</p>
 							</div>
 							
