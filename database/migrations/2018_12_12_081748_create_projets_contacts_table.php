@@ -15,11 +15,11 @@ class CreateProjetsContactsTable extends Migration
     {
         Schema::create('projets_contacts', function (Blueprint $table) {
             $table->increments('id');
-             $table->integer('projet_id')->unsigned();
+            $table->integer('projet_id')->unsigned();
             $table->integer('contact_id')->unsigned();
             $table->timestamps();
 
-             $table-> foreign('projet_id')->references('id')->on('projets')->onDelete('set null')->nullable();
+            $table-> foreign('projet_id')->references('id')->on('projets')->onDelete('set null')->nullable();
             $table-> foreign('contact_id')->references('id')->on('contacts')->onDelete('set null')->nullable();
         });
     }

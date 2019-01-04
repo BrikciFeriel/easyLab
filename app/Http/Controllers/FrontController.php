@@ -82,6 +82,7 @@ class FrontController extends Controller
         return view('frontOffice.actualites' , ['actualites' => $actualites]);  
     }
 
+
     public function detailsActualite($id)
     {
         $actualite = Actualite::find($id);
@@ -103,6 +104,20 @@ class FrontController extends Controller
             'membres' => $membres ,
             //'projets' => $projets,
         ]);;
+    }
+    public function accueil()
+    {
+         $actualites= Actualite::all();
+         $articles = Article::all();
+         $projets = Projet::all();
+
+        return view('frontOffice.accueil' )->with([
+            'actualites' => $actualites ,
+            'articles' => $articles,
+            'projets' => $projets,
+
+
+        ]);; 
     }
 
 }
