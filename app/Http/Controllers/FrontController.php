@@ -33,7 +33,7 @@ class FrontController extends Controller
 
   
     public function projets(){
-    	$projets = Projet::all();
+    	$projets = Projet::paginate(9);
         $nbr = DB::table('projet_user')
              ->select( DB::raw('count(user_id) as total,projet_id'))
              ->groupBy('projet_id')
@@ -62,8 +62,17 @@ class FrontController extends Controller
     }
 
     public function articles(){
-    	$articles = Article::all();
-    	return view('frontOffice.articles' , ['articles' => $articles,]);    	
+        if(request()->has('type')){
+            $articles =Article::where('type',request('type'))->paginate(5);
+        }else{
+            $articles = Article::paginate(9);
+        }
+        /*$participants = DB::table('users')
+             ->join('article_user', 'users.id', '=', 'article_user.user_id')
+             ->select( DB::raw('users.name','article_user.article_id'))
+             ->groupBy('article_user.article_id')
+             ->get();*/
+    	return view('frontOffice.articles',['articles' => $articles]);    
     }
 
     public function detailsArticle($id)

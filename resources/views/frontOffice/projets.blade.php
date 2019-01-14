@@ -91,7 +91,8 @@
 						@endforeach
 															
 					</div>
-				
+					<small>	<div class="row d-flex align-items-center justify-content-center"> {{$projets->links()}} </div>
+					</small>
 				</div>	
 			</section>
 			<!-- End popular-courses Area -->	

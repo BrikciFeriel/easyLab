@@ -40,29 +40,29 @@
 			  		<div class="row">
 			  			<div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
 			  				<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								<li><a href="https://www.facebook.com/univtlemcen/"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.linkedin.com/company/abou-beker-belkaid-university-of-tlemcen/"><i class="fab fa-linkedin-in"></i></a></li>
 								<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
 			  				</ul>			
 			  			</div>
 			  			
 
 			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-			  				<a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span class="text">+953 012 3654 896</span></a>
-			  				<a href="mailto:lrit@lab.com"><span class="lnr lnr-envelope"></span> <span class="text">lrit@lab.com</span></a>			
+							  <a href="tel:043.41.11.89"> <i class="fas fa-phone"></i> <span class="text">043.41.11.89</span></a>  
+							  <a href="mailto:lrit@lab.com"><span class="lnr lnr-envelope"></span> <span class="text">lrit@lab.com</span></a>			
 			  			</div>
 			  		</div>			  					
 	  			</div>
 			</div>
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
-			      <div class="col-md-2" id="logo">
-			        <a href="index.html"><img src="{{asset('LRIT_logo.png')}}" alt="" title="LRIT" style="width: 100%" /></a>
+			      <div class="col-md-1" id="logo">
+			        <a href="index.html"><img src="{{asset('LRIT_logo.png')}}" alt="" title="LRIT" style="width: 180%" /></a>
 			      </div>
 
-			      <div>
+			      <div style="padding-left : 80px;">
 			      	<form class="search-form" action="#">
-			            <input placeholder="Search" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search '" >
+			            <input placeholder="Search" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search '">
 			            <button type="submit"><i class="fa fa-search"></i></button>
 			        </form>
 			      </div>
@@ -75,8 +75,7 @@
 			          <li><a href="{{url('frontOffice/apropos')}}">A propos</a></li>
 			          <li><a href="{{url('frontOffice/equipes')}}">Equipes</a></li>
 			          <li><a href="{{url('frontOffice/membres')}}">Membres</a></li>
-			          <li><a href="{{url('frontOffice/projets')}}">Projets</a></li>
-			         				          					          		          
+			          <li><a href="{{url('frontOffice/projets')}}">Projets</a></li>			          		          
 			          <li><a href="{{url('frontOffice/contact')}}">Contact</a></li>
 			          <li><a href="{{url('/')}}">Login</a></li>
 
@@ -99,79 +98,53 @@
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>Top Products</h4>
+								<h4>Pages populaires</h4>
 								<ul>
-									<li><a href="#">Managed Website</a></li>
-									<li><a href="#">Manage Reputation</a></li>
-									<li><a href="#">Power Tools</a></li>
-									<li><a href="#">Marketing Service</a></li>
+									<li><a href="{{url('/frontOffice/actualites')}}">Actualités</a></li>
+									<li><a href="{{url('/frontOffice/projets')}}">Projets</a></li>
+									<li><a href="{{url('/frontOffice/articles')}}">Publications</a></li>
+									<li><a href="{{url('/frontOffice/membres')}}">Membres</a></li>
 								</ul>								
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>Quick links</h4>
+								<h4>Autres liens</h4>
 								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
+									<li><a href="https://www.univ-tlemcen.dz/fr">Université de tlemcen</a></li>
+									<li><a href="https://www.mesrs.dz/textes-reglementaires">Textes législatifs et réglementaires </a></li>
 								</ul>								
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>Features</h4>
+								<h4>Contactez nous</h4>
 								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4>Resources</h4>
-								<ul>
-									<li><a href="#">Guides</a></li>
-									<li><a href="#">Research</a></li>
-									<li><a href="#">Experts</a></li>
-									<li><a href="#">Agencies</a></li>
+									<li><i class="fas fa-phone"></i> 043.41.11.89</li>
+									<li><i class="fas fa-at"></i> lrit@lab.com</li>
+									<li><i class="fas fa-map-marker-alt"></i> 22, Rue Abi Ayed Abdelkrim Fg Pasteur B.P 119 13000, Tlemcen, Algérie</li>
 								</ul>								
 							</div>
 						</div>																	
-						<div class="col-lg-4  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4>Newsletter</h4>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
-									  <div class="input-group">
-									    <input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="" type="email">
-									    <div class="input-group-btn">
-									      <button class="btn btn-default" type="submit">
-									        <span class="lnr lnr-arrow-right"></span>
-									      </button>    
-									    </div>
-									    	<div class="info"></div>  
-									  </div>
-									</form> 
-								</div>
+						<div class="col-md-3">
+							<div class="col-md-8" id="logo">
+								<img src="{{asset('LRIT_logo.png')}}" style="width: 140%" />
+							</div>
+							<div class="col-md-10">
+									<div class="footer-bottom row align-items-center justify-content-between">
+										<div class="col-md-12 footer-social">
+											<a href="https://www.facebook.com/univtlemcen/"><i class="fab fa-facebook-f"></i></a>
+											<a href="https://www.linkedin.com/company/abou-beker-belkaid-university-of-tlemcen/"><i class="fab fa-linkedin-in"></i></a>
+											<a href="#"><i class="fab fa-google-plus-g"></i></a>
+										</div>
+									</div>
 							</div>
 						</div>											
 					</div>
 
-					<div class="footer-bottom row align-items-center justify-content-between">
-						<div class="col-md-12 col-sm-12 footer-social">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#"><i class="fab fa-google-plus-g"></i></a>
-						
-						</div>
-					</div>						
+											
 				</div>
 			</footer>	
 			<!-- End footer Area -->
