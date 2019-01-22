@@ -165,12 +165,13 @@
 			<script src="{{asset('js/owl.carousel.min.js')}}"></script>									
 			<script src="{{asset('js/mail-script.js')}}"></script>	
 			<script src="{{asset('js/main.js')}}"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-    			$('.icon').click(function(){
-       				 $('.search').toggleClass('active');
-   				 });
-			});	
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('.icon').click(function(){
+						$('.search').toggleClass('active');
+					});
+				});	
 			</script>
+			@yield('script')
 	</body>
 </html>

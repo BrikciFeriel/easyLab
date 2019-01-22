@@ -8,4 +8,12 @@ class Partenaire extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
+    public function contacts()
+    {
+    	return $this->hasMany('App\Contact');
+    }
+    public function projets()
+    {
+    	return $this->belongstoMany('App\Projet');
+    }
 }

@@ -116,6 +116,7 @@
                   <th>Pays</th>
                   <th>Ville</th>
                   <th>Membres</th>
+                  <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -126,6 +127,56 @@
                     <td>{{ $partenaire->type }}</td>
                     <td>{{ $partenaire->pays }}</td>
                     <td>{{ $partenaire->ville }}</td>
+                    <td>
+                      @foreach ($partenaire->contacts as $contact) 
+                        <ul>
+                            <li><a href="#">{{ $contact->nom }} {{ $contact->prenom }}</a></li>
+                        </ul>
+                      @endforeach
+                    </td>
+                    <td>
+                        <form action="#" method="post"> 
+  
+                          {{csrf_field()}}
+                          {{method_field('DELETE')}}
+                        <a href="{{url('partenaires/'.$partenaire->id.'/details')}} " class="btn btn-info">
+                          <i class="fa fa-eye"></i>
+                        </a>
+                        @if(Auth::user()->role->nom != 'membre' )
+                          <a href="#" class="btn btn-default">
+                            <i class="fa fa-edit"></i>
+                          </a>
+                        @endif
+                        @if(Auth::user()->role->nom == 'admin' )
+                         <a href="#" role="button" class="btn btn-danger" data-toggle="modal"><i class="fa fa-trash-o"></i></a>
+                          <div class="modal fade" id="supprimer{{ $partenaire->id }}Modal" tabindex="-1" role="dialog" aria-labelledby="supprimer{{ $partenaire->id }}ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        Voulez-vous vraiment effectuer la suppression ? 
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form class="form-inline" action="{{ url('projets/'.$partenaire->id)}}"  method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                        <button type="button" class="btn btn-light" data-dismiss="modal">Non</button>
+                                            <button type="submit" class="btn btn-danger">Oui</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+  
+  
+                        @endif
+                        </form>
+                      </div>
+                      </td>
                   </tr>
                   @endforeach
                 </tbody>
@@ -136,6 +187,7 @@
                     <th>Pays</th>
                     <th>Ville</th>
                     <th>Membres</th>
+                    <th>Actions</th>
                 </tr>
                 </tfoot>
               </table>

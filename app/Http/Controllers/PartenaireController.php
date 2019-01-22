@@ -21,6 +21,10 @@ class PartenaireController extends Controller
         return view('partenaire.index' , ['partenaires' => $partenaires] ,['labo'=>$labo]);
     }
 
+    public function details($id)
+    {
+    }
+
     /**
      * Show the form for creating a new resource.
      *

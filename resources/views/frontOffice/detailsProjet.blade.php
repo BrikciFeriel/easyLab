@@ -29,9 +29,9 @@
             <div class="col-lg-8 left-contents">
                 <div class=" super-container main-image justify-content-center">
                     @if($projet->photo)
-                    {
+                    
                         <img class="img-fluid"  src="{{asset($projet->photo)}}" alt="" style=" height:300px;width:500px;">
-                    }	
+                    	
                     @else	
                     <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="" style="height:300px;width:500px">
                     @endif
@@ -92,52 +92,25 @@
                         <div class="jq-tab-content" data-tab="4">
                             <section class="top-category-widget-area pt-90 pb-90 ">
                                 <div class="container">
-                                    <div class="row">		
-                                        <div class="col-lg-4">
-                                            <div class="single-cat-widget">
-                                                <div class="content relative">
-                                                    <div class="overlay overlay-bg"></div>
-                                                      <div class="thumb">
-                                                           <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
+                                    <div class="row">
+                                        @foreach($partenaires as $partenaire)
+                                            <div class="col-lg-4">
+                                                <div class="single-cat-widget">
+                                                    <div class="content relative">
+                                                        <div class="overlay overlay-bg"></div>
+                                                        <div class="thumb">
+                                                            <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
+                                                            </div>
+                                                        <div class="content-details">
+                                                            <h4 class="content-title mx-auto text-uppercase"> {{$partenaire->nom}} </h4>
+                                                            <span></span>								        
+                                                            <p>Société de distribution d'engins de travaux publics</p>
+                                                            
                                                         </div>
-                                                      <div class="content-details">
-                                                        <h4 class="content-title mx-auto text-uppercase">Groupe DENNOUNI</h4>
-                                                        <span></span>								        
-                                                        <p>Société de distribution d'engins de travaux publics</p>
-                                                      </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="single-cat-widget">
-                                                <div class="content relative">
-                                                    <div class="overlay overlay-bg"></div>
-                                                      <div class="thumb">
-                                                           <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/chu.jpg')}}" alt="">
-                                                        </div>
-                                                      <div class="content-details">
-                                                        <h4 class="content-title mx-auto text-uppercase">CHU Tlemcen</h4>
-                                                        <span></span>								        
-                                                        <p>Centre Hospitalo-Universitaire Dr Tidjani Damerdji de Tlemcen</p>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="single-cat-widget">
-                                                <div class="content relative">
-                                                    <div class="overlay overlay-bg"></div>
-                                                      <div class="thumb">
-                                                           <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/kherbouch.jpg')}}" alt="">
-                                                        </div>
-                                                      <div class="content-details">
-                                                        <h4 class="content-title mx-auto text-uppercase">Groupe Kherbouche</h4>
-                                                        <span></span>
-                                                        <p>Sociétés commerciales pluri-disciplinaires</p>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                        </div>												
+                                        @endforeach												
                                     </div>
                                 </div>	
                             </section>

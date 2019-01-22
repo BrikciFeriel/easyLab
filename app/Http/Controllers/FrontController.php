@@ -10,6 +10,7 @@ use App\ProjetUser;
 use App\Projet;
 use App\Article;
 use App\Actualite;
+use App\Partenaire;
 
 class FrontController extends Controller
 {
@@ -49,7 +50,8 @@ class FrontController extends Controller
         $projet = Projet::find($id);
         $membres = Projet::find($id)->users()->orderBy('name')->get();
         $projets_similaires = Projet::where('theme',$projet->theme)->get();
-        $nbr = DB::table('projet0_user')
+        $partenaires = Partenaire::find($id)->get();
+        $nbr = DB::table('projet_user')
              ->select( DB::raw('count(user_id) as total,projet_id'))
              ->groupBy('projet_id')
              ->get();
@@ -58,6 +60,7 @@ class FrontController extends Controller
             'membres'=>$membres,
             'projets_similaires'=>$projets_similaires,
             'nbr' => $nbr,
+            'partenaires' => $partenaires,
         ]);;
     }
 
