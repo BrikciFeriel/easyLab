@@ -39,10 +39,10 @@ Route::get('/frontOffice/contact', function () {
     return view('frontOffice/contact');
 });
 
-//Route::get('/frontOffice', 'FrontController@accueil');
-Route::get('/frontOffice', function () {
+Route::get('/frontOffice', 'FrontController@accueil');
+/*Route::get('/frontOffice', function () {
     return view('frontOffice/accueil');
-});
+});*/
 
 Route::get('/frontOffice/projets', 'FrontController@projets');
 // Route::get('/frontOffice/projets', function () {
