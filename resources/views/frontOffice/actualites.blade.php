@@ -23,14 +23,17 @@
 				<div class="container">
 					<div class="row align-items-center">
 						@foreach($actualites as $actualite)
-						<div class="col-lg-6 pb-30">
+							<div class="col-lg-6 pb-30">
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img style=" height: 200px;" class="img-fluid" src="{{asset('img/teaser.png')}}" alt="">
-								</div>
+									@if($actualite->photo)
+										<img class="img-fluid"  src="{{asset($actualite->photo)}}" alt="">	
+									@else
+									<img class="img-fluid" src="{{asset('uploads/actualite.jpg')}}" alt="">
+									@endif								</div>
 								<div class="detials col-12 col-md-6">
 									<!--  -->
-									<p>25 Décembre 2018</p>
+									<p>{{$actualite->date}}</p>
 									<a href="{{url('/frontOffice/actualite/'.$actualite->id.'/details')}}">
 										<h4>{{$actualite->titre}}</h4></a>
 									<p>

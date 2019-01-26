@@ -10,4 +10,8 @@ class Contact extends Model
     {
         return $this->belongsTo('App\Partenaire');
     }
+    public function projets()
+    {
+    	return $this->belongsToMany('App\Projets');
+    }
 }

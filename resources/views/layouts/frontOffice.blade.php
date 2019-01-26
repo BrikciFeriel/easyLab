@@ -42,7 +42,7 @@
 			  				<ul>
 								<li><a href="https://www.facebook.com/univtlemcen/"><i class="fab fa-facebook-f"></i></a></li>
 								<li><a href="https://www.linkedin.com/company/abou-beker-belkaid-university-of-tlemcen/"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href="https://plus.google.com/s/universit%C3%A9%20tlemcen/top"><i class="fab fa-google-plus-g"></i></a></li>
 			  				</ul>			
 			  			</div>
 			  			
@@ -61,12 +61,13 @@
 			      </div>
 
 			      <div style="padding-left : 80px;">
-			      	<form class="search-form" action="#">
-			            <input placeholder="Search" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search '">
-			            <button type="submit"><i class="fa fa-search"></i></button>
+					  <form class="search-form" action="/frontOffice/search">
+						{{ csrf_field() }}
+			            <input placeholder="Search" name="q" type="text" style="color:black;">
+						<button type="submit"><i class="fa fa-search"></i></button>
 			        </form>
-			      </div>
-			   
+				  </div>
+
 			      <div class="col-md-7">
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
@@ -137,7 +138,7 @@
 										<div class="col-md-12 footer-social">
 											<a href="https://www.facebook.com/univtlemcen/"><i class="fab fa-facebook-f"></i></a>
 											<a href="https://www.linkedin.com/company/abou-beker-belkaid-university-of-tlemcen/"><i class="fab fa-linkedin-in"></i></a>
-											<a href="#"><i class="fab fa-google-plus-g"></i></a>
+											<a href="https://plus.google.com/s/universit%C3%A9%20tlemcen/top"><i class="fab fa-google-plus-g"></i></a>
 										</div>
 									</div>
 							</div>

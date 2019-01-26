@@ -32,15 +32,15 @@
 								
 								<div class="single-sidebar-widget user-info-widget">
 									<img class="rounded-circle" src="{{asset($membre->photo)}}" alt="" style="width: 150px;">
-									<a href="#"><h4>{{$membre->name}} {{$membre->prenom}}</h4></a>
+									<h4>{{$membre->name}} {{$membre->prenom}}</h4>
 									<p>
 										{{$membre->grade}}
 									</p>
 									<ul class="social-links">
-										<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="#"><i class="fab fa-github"></i></a></li>
-										<li><a href="#"><i class="fab fa-researchgate"></i></a></li>
+										<li><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+										<li><a href="{{$membre->lien_linkedin}}"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="https://github.com/"><i class="fab fa-github"></i></a></li>
+										<li><a href="{{$membre->lien_rg}}"><i class="fab fa-researchgate"></i></a></li>
 									</ul>
 									
 								</div>
@@ -135,7 +135,7 @@
 	                                			<h6 class="typo-list">Encadreur</h6>
 		                                    </div>
 		                                    <div class="col-md-9">
-			                                   		<p><a href="{{url('frontOffice/'.$membre->these->encadreur_int.'/details')}}">{{$membre->these->encadreur_int}}</a>{{$membre->these->encadreur_ext}}</p>
+			                                   		<p>{{$membre->these->encadreur_int}} {{$membre->these->encadreur_ext}}</p>
 			                                </div>
 	                                	</div>
 
@@ -157,25 +157,26 @@
 											@foreach ($membre->articles as $article)
 											<li class="justify-content-between d-flex">
 												<p>{{$article->titre}}</p>
-												<a class="primary-btn text-uppercase" href="#">View Details</a>
+												<a class=" text-uppercase" href="{{url('frontOffice/article/'.$article->id.'/details')}}"> Details</a>
 											</li>
 											 @endforeach
 										</ul>
-										
-										@endif
-										@if(!($membre->articles))
-											<p>aucun article</p>
+										@else
+											<p >aucun article</p>
 										@endif
 
 	                                </div>
 
 	                                <div class="jq-tab-content" data-tab="4">
 										<ul class="course-list">
+											@if($membre->projets())
+											@foreach ($membre->projets as $projet)
 											<li class="justify-content-between d-flex">
-												<p>Introduction Lesson</p>
-												<a class="primary-btn text-uppercase" href="#">View Details</a>
+												<p>{{$projet->intitule}}</p>
+												<a class=" text-uppercase" href="{{url('frontOffice/projet/'.$projet->id.'/details')}}"> Details</a>
 											</li>
-											
+												@endforeach
+												@endif
 										</ul>
 	                                </div>
 	                                                               

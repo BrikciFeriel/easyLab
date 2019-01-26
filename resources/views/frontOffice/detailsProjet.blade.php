@@ -30,10 +30,10 @@
                 <div class=" super-container main-image justify-content-center">
                     @if($projet->photo)
                     
-                        <img class="img-fluid"  src="{{asset($projet->photo)}}" alt="" style=" height:300px;width:500px;">
+                        <img class="img-fluid"  src="{{asset($projet->photo)}}" alt="" style=" height:300px;width:700px;">
                     	
                     @else	
-                    <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="" style="height:300px;width:500px">
+                    <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="" style="height:300px;width:700px">
                     @endif
                 </div>
                 <div class="jq-tab-wrapper" id="horizontalTab">
@@ -78,20 +78,21 @@
                                             <br><br>
                                             <div class="row container">
                                                 @foreach($membres as $membre)
+                                                @if($membre->id != $membre->equipe->chef->id)	
                                                 <div class="col-md-4">
                                                         <div class="text-center container">
                                                         <img class="rounded-circle" src="{{asset($membre->photo)}}" alt="" style="width: 110px; margin-bottom: 10px ">
                                                         <a href="{{url('frontOffice/'.$membre->id.'/details')}}"><h4>{{$membre->name}} {{$membre->prenom}}</</h4></a>
                                                         </div>
                                                     </div>
+                                                    @endif
                                                 @endforeach
                                             </div>
                             
                                     </section>
                         </div>
                         <div class="jq-tab-content" data-tab="4">
-                            <section class="top-category-widget-area pt-90 pb-90 ">
-                                <div class="container">
+                            <section class="top-category-widget-area pt-20 pb-20 ">
                                     <div class="row">
                                         @foreach($partenaires as $partenaire)
                                             <div class="col-lg-4">
@@ -99,20 +100,19 @@
                                                     <div class="content relative">
                                                         <div class="overlay overlay-bg"></div>
                                                         <div class="thumb">
-                                                            <img class="content-image img-fluid d-block mx-auto" src="{{asset('img/denoun.jpg')}}" alt="">
+                                                            <img class="content-image img-fluid d-block mx-auto" src="{{asset($partenaire->photo)}}" alt="">
                                                             </div>
                                                         <div class="content-details">
-                                                            <h4 class="content-title mx-auto text-uppercase"> {{$partenaire->nom}} </h4>
+                                                            <h4 class="content-title mx-auto text-uppercase">  </h4>
                                                             <span></span>								        
-                                                            <p>Société de distribution d'engins de travaux publics</p>
-                                                            
+                                                            <p> {{$partenaire->nom}} </p>
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        @endforeach												
-                                    </div>
-                                </div>	
+                                            </div>	
+                                            @endforeach							
+                                    </div>	
                             </section>
                         </div>
                                                     
@@ -166,7 +166,7 @@
                     </div>
                 </div>
             </div>
-            @if($projets_similaires)
+            @if($projets_similaires )
                     
                 <div class="row">
                     @foreach($projets_similaires as $projet_similaire)
@@ -177,9 +177,7 @@
                                         <div class="overlay overlay-bg"></div>
                                                 
                                         @if($projet_similaire->photo)
-                                        {
-                                            <img class="img-fluid"  src="{{asset($projet_similaire->photo)}}" alt="">	
-                                        }	
+                                            <img class="img-fluid"  src="{{asset($projet_similaire->photo)}}" alt="">
                                         @else	
                                         <img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="">
                                         @endif
@@ -210,6 +208,8 @@
                         @endif	
                 @endforeach  
                 </div>
+            @else
+            <div><h5>Aucun projet n'a été trouvé</h5></div>
             @endif
         </div>	
     </section>

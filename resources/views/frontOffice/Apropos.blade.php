@@ -64,26 +64,26 @@
                 <div class="active-review-carusel">
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"><small><img src="{{asset('uploads/specialite/RSD.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>RSDS</h4> <br> <h6>(Réseau, service distribués et systèmes)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/RSD.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>RSDS</h4> <br> <h6>(Réseau, service distribués et systèmes)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"> <small><img src="{{asset('uploads/specialite/IL.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>ILS</h4> <br> <h6>(Ingénierie logicielle sécurisée)</h6> </div></a>
+                             <small><img src="{{asset('uploads/specialite/IL.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>ILS</h4> <br> <h6>(Ingénierie logicielle sécurisée)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"> <small><img src="{{asset('uploads/specialite/SIDK.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>SIDK</h4> <br> <h6>(Système d'information et de connaissance)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/SIDK.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>SIDK</h4> <br> <h6>(Système d'information et de connaissance)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                                <a href="#"> <small><img src="{{asset('uploads/specialite/IA.jpg')}}" alt=""></small> </a>
-                                <a href="#"><div class="container"> <h4>IA</h4> <br> <h6>(Intelligence Artificielle)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/IA.jpg')}}" alt=""></small> 
+                             <div class="container"> <h4>IA</h4> <br> <h6>(Intelligence Artificielle)</h6> </div>
                         </div>
                     </div>																									
                 </div>

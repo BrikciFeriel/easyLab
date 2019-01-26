@@ -11,6 +11,7 @@ use App\Projet;
 use App\Article;
 use App\Actualite;
 use App\Partenaire;
+use Carbon\Carbon;
 
 class FrontController extends Controller
 {
@@ -50,11 +51,13 @@ class FrontController extends Controller
         $projet = Projet::find($id);
         $membres = Projet::find($id)->users()->orderBy('name')->get();
         $projets_similaires = Projet::where('theme',$projet->theme)->get();
-        $partenaires = Partenaire::find($id)->get();
         $nbr = DB::table('projet_user')
              ->select( DB::raw('count(user_id) as total,projet_id'))
              ->groupBy('projet_id')
              ->get();
+        $partenaires = DB::select("SELECT distinct P.nom ,P.photo  FROM partenaires P , contacts C , projets_contacts PC , projets Pr
+                                    WHERE P.id=C.partenaire_id and C.id=PC.contact_id and PC.projet_id=$id");
+                                   
         return view('frontOffice.detailsProjet')->with([
             'projet' => $projet,
             'membres'=>$membres,
@@ -109,27 +112,47 @@ class FrontController extends Controller
     {
         $equipe = Equipe::find($id);
         $membres = Equipe::find($id)->membres()->get();
-       // $projets = Equipe::find($id)->projets()->get();
-
+        $projets = DB::select("SELECT distinct id , intitule from projets where id in 
+                                (select projet_id from projet_user where user_id in 
+                                (select id from users where equipe_id = $id))");
+        $partenaires = DB::select("SELECT distinct P.nom ,P.photo,P.pays,P.type  FROM partenaires P , contacts C , projets_contacts PC , projets Pr,projet_user Pu,users U
+        WHERE P.id=C.partenaire_id and C.id=PC.contact_id and PC.projet_id=Pr.id and Pr.id=Pu.projet_id and Pu.user_id=U.id and U.equipe_id=$id");	
         return view('frontOffice.detailsEquipe')->with([
             'equipe' => $equipe ,
             'membres' => $membres ,
-            //'projets' => $projets,
+            'projets' => $projets,
+            'partenaires' => $partenaires,
         ]);;
     }
     public function accueil()
     {
-         $actualites= Actualite::all();
-         $articles = Article::all();
-         $projets = Projet::all();
+         $carbon = Carbon::today();
+       /* $date= Carbon::createFromFormat('d/m/Y','11/06/2002');
+        $date = DB::select("SELECT date from actualites");
+        $time = strtodate('20/10/2002');
+        $newformat = date('d/m/Y',$time);
+        return $newformat;*/
+         $actualites= DB::table('actualites')
+         ->where('date', '>=', '24/01/2019' )
+         ->get();
+         
+         $articles = Article::orderBy('created_at', 'asc')->take(4)->get();
+
+         $projets = Projet::orderBy('created_at', 'asc')->take(8)->get();
+
+         $nbr = DB::table('projet_user')
+             ->select( DB::raw('count(user_id) as total,projet_id'))
+             ->groupBy('projet_id')
+             ->get();
 
         return view('frontOffice.accueil' )->with([
             'actualites' => $actualites ,
             'articles' => $articles,
             'projets' => $projets,
-
+            'nbr' => $nbr,
 
         ]);; 
+        
     }
 
 }

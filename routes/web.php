@@ -5,6 +5,7 @@ use App\Projet;
 use App\Article;
 use App\Equipe;
 use App\Parametre;
+use App\Actualite;
 use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +75,29 @@ Route::get('/frontOffice/article/{id}/details','FrontController@detailsArticle')
 Route::get('/frontOffice/actualites','FrontController@actualites');
 
 Route::get('/frontOffice/actualite/{id}/details','FrontController@detailsActualite');
+
+Route::any('/frontOffice/search',function(){
+
+	$labo = Parametre::find('1'); 
+    $q = Input::get ( 'q' );
+    $membres = User::where('name','LIKE','%'.$q.'%')->orWhere('prenom','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
+    $theses = These::where('titre','LIKE','%'.$q.'%')->orWhere('sujet','LIKE','%'.$q.'%')->get();
+    $articles = Article::where('titre','LIKE','%'.$q.'%')->orWhere('resume','LIKE','%'.$q.'%')->orWhere('type','LIKE','%'.$q.'%')->get();
+    $projets = Projet::where('intitule','LIKE','%'.$q.'%')->orWhere('resume','LIKE','%'.$q.'%')->orWhere('type','LIKE','%'.$q.'%')->get();
+    $equipes = Equipe::where('intitule','LIKE','%'.$q.'%')->orWhere('resume','LIKE','%'.$q.'%')->orWhere('achronymes','LIKE','%'.$q.'%')->get();
+    $actualites = Actualite::where('titre','LIKE','%'.$q.'%')->orWhere('detail','LIKE','%'.$q.'%')->orWhere('type','LIKE','%'.$q.'%')->get();
+        // return view('search')->withDetails($user)->withQuery ( $q );
+        return view('/frontOffice/search')->with([
+            'membres' => $membres,
+            'theses' => $theses,
+            'articles' => $articles,
+            'projets' => $projets,
+            'equipes' => $equipes,
+            'actualites' => $actualites,
+            'labo'=>$labo,
+            
+        ]);;
+    });
  
  //backoffice
 
@@ -144,6 +168,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/stat',function(){
+    $nbrarticle= DB::table('articles')
+                    ->select('id' , 'type' , DB::raw('count(type) as count'))
+                    ->groupBy('type')
+                    ->orderBy('id','asc')
+                    ->get();
+    $typearticle=Article::disctinct('type')->pluck('type');
+    return response()->json([
+                "nbrarticle"=> $nbrarticle,
+                "typearticle"=> $typearticle
+            ]);
+});
+
 Route::get('/statistics',function(){
 
 	$year = date('Y');
@@ -197,5 +234,7 @@ Route::any('/search',function(){
             'labo'=>$labo,
             
         ]);;
+
+
 
 });

@@ -19,8 +19,8 @@ class Projet extends Model
     {
         return $this->belongsToMany('App\User');
     }
-    public function partenaires()
+    public function contacts()
     {
-    	return $this->hasMany('App\Partenaire');
+    	return $this->belongsToMany('App\Contact');
     }
 }
