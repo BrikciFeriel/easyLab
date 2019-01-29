@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnDeletedAtActualites extends Migration
+class CreateProjetsContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddColumnDeletedAtActualites extends Migration
      */
     public function up()
     {
-        Schema::table('actualites', function (Blueprint $table) {
-            $table->datetime('deleted_at')->nullable();
+        Schema::create('projets_contacts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+
+            
         });
     }
 
@@ -25,8 +28,6 @@ class AddColumnDeletedAtActualites extends Migration
      */
     public function down()
     {
-        Schema::table('actualites', function (Blueprint $table) {
-             $table->dropColumn('deleted_at');
-        });
+        Schema::dropIfExists('projets_contacts');
     }
 }

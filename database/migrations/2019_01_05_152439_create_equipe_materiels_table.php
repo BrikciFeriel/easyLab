@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnDeletedAtArticles extends Migration
+class CreateEquipeMaterielsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddColumnDeletedAtArticles extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->datetime('deleted_at')->nullable();
+        Schema::create('equipe_materiels', function (Blueprint $table) {
+            $table->increments('id');
+             $table->string('date_debut')->nullable();
+             $table->string('date_fin')->nullable();
         });
     }
 
@@ -25,8 +27,6 @@ class AddColumnDeletedAtArticles extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-        });
+        Schema::dropIfExists('equipe_materiels');
     }
 }

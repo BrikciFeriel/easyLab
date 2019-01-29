@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnType extends Migration
+class AddColumnUserId extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,9 @@ class AddColumnType extends Migration
     public function up()
     {
         Schema::table('actualites', function (Blueprint $table) {
-             $table->string('type')->nullable();
+             
+        $table-> integer('user_id')->nullable()->unsigned()->after('lieu');
+        $table-> foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 
@@ -26,7 +28,8 @@ class AddColumnType extends Migration
     public function down()
     {
         Schema::table('actualites', function (Blueprint $table) {
-             $table->dropColumn('type');
+             $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
         });
     }
 }

@@ -15,12 +15,12 @@ class CreateUserMaterielsTable extends Migration
     {
         Schema::create('user_materiels', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('materiel_id')->unsigned();
+            $table->string('date_debut')->nullable();
+            $table->string('date_fin')->nullable();
             $table->timestamps();
 
-            $table-> foreign('user_id')->references('id')->on('users')->onDelete('set null')->nullable();
-            $table-> foreign('materiel_id')->references('id')->on('materiels')->onDelete('set null')->nullable();
+            /*$table-> foreign('user_id')->references('id')->on('users')->onDelete('set null')->nullable();
+            $table-> foreign('materiel_id')->references('id')->on('materiels')->onDelete('set null')->nullable();*/
         });
     }
 

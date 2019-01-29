@@ -17,9 +17,17 @@ class CreateEquipesTable extends Migration
             $table->increments('id');
             $table->string('intitule')->nullable();
             $table->string('resume',1000)->nullable();
+            $table->string('photo')->nullable();
             $table->string('achronymes')->nullable();
             $table->string('axes_recherche',1000)->nullable();
             $table->timestamps();
+
+            $table->datetime('deleted_at')->nullable();
+
+            $table-> integer('chef_id')->unsigned()->nullable();
+            $table-> foreign('chef_id')->references('id')->on('users')->onDelete('set null');
+
+
         });
     }
 

@@ -19,10 +19,13 @@ class CreateContactsTable extends Migration
             $table->string('prenom',45)->nullable();
             $table->string('email')->nullable();
             $table->string('num_tel')->nullable();
+            $table->string('fonction')->nullable();
+            $table->string('photo')->nullable();
+
             $table->string('matiere_cooperation')->nullable();
             $table->timestamps();
 
-            $table-> foreign('partenaire_id')->references('id')->on('partenaires')->onDelete('set null');
+            //$table-> foreign('partenaire_id')->references('id')->on('partenaires')->onDelete('set null');
         });
     }
 

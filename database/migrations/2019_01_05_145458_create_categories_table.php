@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnDate extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddColumnDate extends Migration
      */
     public function up()
     {
-        Schema::table('actualites', function (Blueprint $table) {
-             $table->string('date')->nullable();
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nom')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddColumnDate extends Migration
      */
     public function down()
     {
-        Schema::table('actualites', function (Blueprint $table) {
-            $table->dropColumn('date');
-        });
+        Schema::dropIfExists('categories');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnCoencadreurExtTheses extends Migration
+class AddColumnEncadreurExtThese extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AddColumnCoencadreurExtTheses extends Migration
     public function up()
     {
         Schema::table('theses', function (Blueprint $table) {
-            $table->string('coencadreur_ext')->after('coencadreur_int');
-            $table-> foreign('coencadreur_ext')->references('id')->on('contacts')->onDelete('set null');
+            $table->integer('encadreur_ext_id')->unsigned()->nullable()->after('encadreur_int');
+            $table-> foreign('encadreur_ext_id')->references('id')->on('contacts')->onDelete('set null');
         });
     }
 
@@ -27,8 +27,8 @@ class AddColumnCoencadreurExtTheses extends Migration
     public function down()
     {
         Schema::table('theses', function (Blueprint $table) {
-            $table->dropColumn('coencadreur_ext');
-             $table->dropForeign(['coencadreur_ext']);
+            $table->dropForeign(['encadreur_ext_id']);
+            $table->dropColumn('encadreur_ext_id');
         });
     }
 }

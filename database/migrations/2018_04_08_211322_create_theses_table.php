@@ -27,6 +27,11 @@ class CreateThesesTable extends Migration
             //$table->string('coencadreur_ext',150)->nullable();
             $table->string('membre',150)->nullable();
             $table->timestamps();
+
+            $table->datetime('deleted_at')->nullable();
+
+            $table-> integer('user_id')->unsigned()->nullable();
+            $table-> foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

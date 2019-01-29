@@ -30,6 +30,9 @@ class CreateArticlesTable extends Migration
             $table->string('membres_ext' ,100)->nullable();
             $table->string('detail')->nullable();
             $table->integer('deposer')->nullable();
+
+            $table->datetime('deleted_at')->nullable();
+            
             $table->timestamps();
         });
 

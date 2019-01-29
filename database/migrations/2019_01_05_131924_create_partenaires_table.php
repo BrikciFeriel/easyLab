@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMaterielsTable extends Migration
+class CreatePartenairesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateMaterielsTable extends Migration
      */
     public function up()
     {
-        Schema::create('materiels', function (Blueprint $table) {
+        Schema::create('partenaires', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('libelle')->nullable();
-            $table->integer('numero')->nullable();
+            $table->string('nom')->nullable();//le nom du partenaire est unique  
+            $table->string('type')->nullable();
+            $table->string('pays')->nullable();
+            $table->string('ville')->nullable();
             $table->timestamps();
-
-            $table-> foreign('categorie_id')->references('id')->on('categorie_materiels')->onDelete('set null');
+   
         });
     }
 
@@ -30,6 +31,6 @@ class CreateMaterielsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materiels');
+        Schema::dropIfExists('partenaires');
     }
 }

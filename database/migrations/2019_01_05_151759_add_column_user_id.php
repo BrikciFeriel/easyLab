@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnDateDebutUserMateriels extends Migration
+class AddColumnUserId extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddColumnDateDebutUserMateriels extends Migration
     public function up()
     {
         Schema::table('user_materiels', function (Blueprint $table) {
-             $table->string('date_debut')->nullable()->after('materiel_id');
+            $table-> integer('user_id')->nullable()->unsigned()->after('id');
+            $table-> foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 
@@ -26,7 +27,8 @@ class AddColumnDateDebutUserMateriels extends Migration
     public function down()
     {
         Schema::table('user_materiels', function (Blueprint $table) {
-             $table->dropColumn('date_debut');
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
         });
     }
 }
