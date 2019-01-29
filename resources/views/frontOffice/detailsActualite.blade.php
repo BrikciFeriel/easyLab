@@ -22,7 +22,11 @@
 					<div class="row">
 						<div class="col-lg-8 event-details-left">
 							<div class="main-img">
-								<img class="img-fluid" src="{{asset('img/teaser.png')}}" alt="">
+								@if($actualite->photo)
+									<img class="img-fluid"  src="{{asset($actualite->photo)}}" alt="" style="height:300px;width:700px">	
+								@else
+								<img class="img-fluid" src="{{asset('uploads/actualite.jpg')}}" alt="" style="height:300px;width:700px">
+								@endif
 							</div>
 							<div class="details-content">
 								

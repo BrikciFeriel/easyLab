@@ -62,7 +62,11 @@
 												<div class="row">
 													@foreach($equipes as $equipe)
 													<div class="col-12 col-md-2 thumb">
-													<img class="img-fluid" src="{{asset('sidk.png')}}" alt="">
+													@if($equipe->photo)
+														<img class="img-fluid"  src="{{asset($equipe->photo)}}" alt="">	
+													@else
+														<img class="img-fluid" src="{{asset('uploads/specialite/aboutus.jpg')}}" alt="">
+													@endif
 													</div>
 													<div class="detials col-12 col-md-4">
 													
@@ -76,7 +80,7 @@
 												
 											</div>
 										
-										
+	                                   	</section>
 										
 	                                </div>
 
@@ -88,4 +92,4 @@
 				</div>	
 			</section>
 			@endsection
-					
+				

@@ -1,16 +1,16 @@
 @extends('layouts.frontOffice')
 
 @section('banner')
-    <section class="banner-area relative about-banner" id="home">	
+    <section class="banner-area relative about-banner" id="home">   
         <div class="overlay overlay-bg"></div>
-        <div class="container">				
+        <div class="container">             
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="about-content col-lg-12">
                     <h1 class="text-white">
-                        A propos	
-                    </h1>	
+                        A propos    
+                    </h1>   
                     <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/apropos')}}"> A propos</a></p>
-                </div>	
+                </div>  
             </div>
         </div>
     </section>
@@ -59,36 +59,36 @@
     <center><h1>Nos équipes</h1></center>
     <section class="review-area section-gap relative">
         <div class="overlay overlay-bg"></div>
-        <div class="container">				
+        <div class="container">             
             <div class="row">
                 <div class="active-review-carusel">
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"><small><img src="{{asset('uploads/specialite/RSD.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>RSDS</h4> <br> <h6>(Réseau, service distribués et systèmes)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/RSD.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>RSDS</h4> <br> <h6>(Réseau, service distribués et systèmes)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"> <small><img src="{{asset('uploads/specialite/IL.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>ILS</h4> <br> <h6>(Ingénierie logicielle sécurisée)</h6> </div></a>
+                             <small><img src="{{asset('uploads/specialite/IL.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>ILS</h4> <br> <h6>(Ingénierie logicielle sécurisée)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                            <a href="#"> <small><img src="{{asset('uploads/specialite/SIDK.jpg')}}" alt=""></small> </a>
-                            <a href="#"><div class="container"> <h4>SIDK</h4> <br> <h6>(Système d'information et de connaissance)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/SIDK.jpg')}}" alt=""></small> 
+                            <div class="container"> <h4>SIDK</h4> <br> <h6>(Système d'information et de connaissance)</h6> </div>
                         </div>
                     </div>
                     <div class="single-review item">
                         <div class="title justify-content-start d-flex">
-                                <a href="#"> <small><img src="{{asset('uploads/specialite/IA.jpg')}}" alt=""></small> </a>
-                                <a href="#"><div class="container"> <h4>IA</h4> <br> <h6>(Intelligence Artificielle)</h6> </div></a>
+                            <small><img src="{{asset('uploads/specialite/IA.jpg')}}" alt=""></small> 
+                             <div class="container"> <h4>IA</h4> <br> <h6>(Intelligence Artificielle)</h6> </div>
                         </div>
-                    </div>																									
+                    </div>                                                                                                  
                 </div>
             </div>
-        </div>	
+        </div>  
     </section>
-    <!-- End review Area -->	
+    <!-- End review Area -->    
 @endsection

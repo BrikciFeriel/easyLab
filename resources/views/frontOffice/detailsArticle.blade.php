@@ -1,16 +1,16 @@
 @extends('layouts.frontOffice')
 
 @section('banner')
-    <section class="banner-area relative about-banner" id="home">	
+    <section class="banner-area relative about-banner" id="home">   
         <div class="overlay overlay-bg"></div>
-        <div class="container">				
+        <div class="container">             
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="about-content col-lg-12">
                     <h1 class="text-white">
-                        Articles	
-                    </h1>	
+                        Articles    
+                    </h1>   
                     <p class="text-white link-nav"><a href="{{url('/frontOffice')}}">Accueil </a>  <span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/articles')}}"> Articles<span class="fas fa-angle-right"></span>  <a href="{{url('/frontOffice/detailsArticle')}}"> Détails</a></p>
-                </div>	
+                </div>  
             </div>
         </div>
     </section>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="jq-tab-content-wrapper">
                                     <div class="jq-tab-content active" data-tab="1">
-                                        {{$article->resume}}	
+                                        {{$article->resume}}    
                                     </div>
                                     <div class="jq-tab-content" data-tab="2">
                                             <section class="about_area p_120">
@@ -99,7 +99,7 @@
                                 <span>Nom du journal</span>
                                 <span style="text-align:right;">{{$article->journal}}</span>
                             </li>
-                        @endif														
+                        @endif                                                      
                     </ul>
                 </div>
                 <div class="single-event-details">
@@ -116,7 +116,7 @@
                         <li class="justify-content-between d-flex">
                             <span>Pays</span>
                             <span>{{$article->lieu_pays}}</span>
-                        </li>														
+                        </li>                                                       
                     </ul>
                 </div>
                 <div class="single-event-details">
@@ -133,12 +133,12 @@
                         <li class="justify-content-between d-flex">
                             <span>DOI</span>
                             <span></span>
-                        </li>														
+                        </li>                                                       
                     </ul>
-                </div>														
+                </div>                                                      
             </div>
         </div>
-    </div>	
+    </div>  
 </section>
-<!-- End article-details Area -->	
+<!-- End article-details Area -->   
 @endsection

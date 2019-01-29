@@ -25,32 +25,14 @@
 							<div class="title text-center">
 								<h1 class="mb-10">Liste des projets</h1>
 							</div>
-							<span class="widget-wrap">
-								<div class=" search-widget">
-									<form class="search-form" action="#">
-										<input placeholder="Rechercher un projet" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
-										<button type="submit"><i class="fa fa-search"></i></button>
-									</form>
-								</div>
-							</span>
-							<div class="pb-40 col-lg-12  justify-content-center">
-								<center>
-									<div class="button-group-area ">
-									<a href="#" class="genric-btn primary-border circle arrow">SIDK</a>
-									<a href="#" class="genric-btn primary-border circle arrow">ILS</a>
-									<a href="#" class="genric-btn primary-border circle arrow">RSDS</a>
-									<a href="#" class="genric-btn primary-border circle arrow">IA</a>
-								</div>
-								</center>
-								
-							</div>
-							
 						</div>
 						
 					</div>
 									
 					<div class="row">
-
+				<table id="datatable" class="table table-bordered dt-responsive nowrap">
+					<tbody>
+						<tr>
 						@foreach($projets as $projet)
 							<div class="single-popular-carusel col-lg-4 col-md-6">
 								<div class="thumb-wrap relative">
@@ -58,12 +40,12 @@
 										<div class="overlay overlay-bg"></div>
 												
 										@if($projet->photo)
-										{
-											<img class="img-fluid"  src="{{asset($projet->photo)}}" alt="">	
-										}	
-										@endif	
-										<img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="">
 										
+											<img class="img-fluid"  src="{{asset($projet->photo)}}" alt="">	
+											
+										@else
+										<img class="img-fluid" src="{{asset('uploads/projets/projet.jpg')}}" alt="">
+										@endif
 									</div>
 									@foreach($nbr as $nbrs)
                        					 @if($nbrs->projet_id == $projet->id)
@@ -89,11 +71,46 @@
 								
 							</div>		
 						@endforeach
-															
+						</tr>
+					</tbody>
+				</table>								
 					</div>
 					<small>	<div class="row d-flex align-items-center justify-content-center"> {{$projets->links()}} </div>
 					</small>
 				</div>	
 			</section>
 			<!-- End popular-courses Area -->	
+@endsection
+
+@section('script')
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Default Datatable
+        $('#datatable').DataTable({
+            keys: true
+        });
+        //Buttons examples
+        var table = $('#datatable-buttons').DataTable({
+            lengthChange: false,
+            buttons: ['copy', 'print']
+        });
+        // Multi Selection Datatable
+        $('#selection-datatable').DataTable({
+            select: {
+                style: 'multi'
+            }
+        });
+        table.buttons().container()
+                .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+    } );
+</script>
+<!-- Datatable js -->
+<script src="{{asset('assets/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
+<!-- Key Tables -->
+<script src="{{asset('assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+<!-- Selection table -->
+<script src="{{asset('assets/libs/datatables.net-select/js/dataTables.select.min.js')}}"></script>
 @endsection
